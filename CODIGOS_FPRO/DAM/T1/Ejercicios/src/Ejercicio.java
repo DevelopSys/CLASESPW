@@ -62,4 +62,40 @@ public class Ejercicio {
         lecturaTeclado.close();
         lecturaTeclado = null;
     }
+
+    public void ejercicio3(){
+        // 79050
+        /*
+        Se introducen los 5 dígitos de un número (decenas de mil, unidades de mil,
+        centenas, decenas y unidades), y se obtiene el número correspondiente.
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Indica un numero de 5 digitos");
+        int numeroAnalizar = scanner.nextInt();
+        if (numeroAnalizar >9999 && numeroAnalizar<100000){
+        // 79050
+            int decenasMil = numeroAnalizar/10000; // 7,9050
+            // decenas de mil
+            int unidadesMil = (numeroAnalizar%10000)/1000; // 9,050
+            // unidades mil
+            int centenas = ((numeroAnalizar%10000)%1000)/100; //0,50
+            // centenas
+            int decenas = (((numeroAnalizar%10000)%1000)%100)/10; // 5,0
+            // decenas
+            int unidades = (((numeroAnalizar%10000)%1000)%100)%10; // 0
+            // unidades
+        } else {
+            System.out.println("Numero incorrecto");
+        }
+
+        // 98765 -> "98765"
+        String numeroPalabra = String.valueOf(numeroAnalizar);
+        int decenasMil = Integer.parseInt(String.valueOf(numeroPalabra.charAt(0)));
+        String unidadesMil = String.valueOf(numeroPalabra.charAt(1));
+        String centenas = String.valueOf(numeroPalabra.charAt(2));
+        String decenas = String.valueOf(numeroPalabra.charAt(3));
+        String unidades = String.valueOf(numeroPalabra.charAt(4));
+
+
+    }
 }
