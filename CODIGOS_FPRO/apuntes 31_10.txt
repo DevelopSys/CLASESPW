@@ -1,0 +1,43 @@
+&& -> SOLO OPERANDO A NIVEL BOOLEAN -> cuando el resultado es TRUE? -> cuando todas las condiciones de la sentencia son TRUE. Si hay una FALSE la sentencia tiene como resultado un FALSE
+
+C    C.   R 
+T.   T.   T
+T.   F.   F. 
+F.   T.   F. 
+F.   F.   F
+
+& -> OPERANDO A NIVEL DE BIT / OPERANDO A NIVEL DE BOOLEAN
+
+RWX
+421 -> 5
+101
+
+5>0 && 5!=20 && 20<20 && 34>56 -> F
+5 & 6
+
+1BIT -> 0/1
+1BYTE -> 00000000
+256	128 64 32 16 8 4 2 1
+		  		   1 0 0
+5 -> 101
+6 -> 110
+R -> 100
+
+
+&& -> SOLO OPERANDO A NIVEL BOOLEAN -> cuando el resultado es TRUE? -> cuando una de las condiciones de la sentencia es TRUE. Si todas las condiciones son FALSE la sentencia tiene como resultado un FALSE
+
+C    C.   R 
+T.   T.   T
+T.   F.   T. 
+F.   T.   T. 
+F.   F.   F
+
+| -> OPERANDO A NIVEL DE BIT / OPERANDO A NIVEL DE BOOLEAN
+256	128 64 32 16 8 4 2 1
+                 1 1 0 1
+12 -> 1100
+13 -> 1101
+R ->  1101
+
+
+69 115 116 97 32 102 114 97 115 101 32 108 97 32 118 97 109 111 115 32 97 32 99 111 100 105 102 105 99 97 114 

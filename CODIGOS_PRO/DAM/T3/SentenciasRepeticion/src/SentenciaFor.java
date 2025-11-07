@@ -55,13 +55,82 @@ public class SentenciaFor {
             for (int j = 0; j < 5; j++) {
                 if (i == 0 || i == 4) {
                     System.out.print("*");
-                } else if (j==0|| j==4){
+                } else if (j == 0 || j == 4) {
                     System.out.print("*");
-                } else{
+                } else {
                     System.out.print(" ");
                 }
             }
             System.out.println();
+        }
+    }
+
+    // cada una de las letras de una palabra
+    public void palabraPalidromo() {
+        // palabra es palindromo cuando se lee igual de principio a fin que de fin a principio
+        // alli ves sevilla
+        // tiene que haber un boolean en algun sitio
+        // ANNNNA
+        String frase = "alli ves sevilla";
+        frase = frase.replaceAll(" ","");
+        boolean esPalindromo = true;
+        for (int i = 0; i < frase.length() / 2; i++) {
+            // comparar cada letra 0->ultimo
+            // comparar cada letra 1->penultimo
+            // comparar cada letra 2->antepenultimo
+            // i=2
+            // letraUno = l
+            // letraDos =
+
+            char letraUno = frase.charAt(i);
+            char letraDos = frase.charAt(frase.length() - 1 - i);
+            if (letraUno != letraDos) {
+                esPalindromo = false;
+                break;
+            }
+        }
+
+        if (esPalindromo) {
+            System.out.println("La palabra es palindromo");
+        } else {
+            System.out.println("La palabra no es palindromo");
+        }
+
+    }
+
+    // calcular el factorial de un numero
+    public void calcularFactorial(){
+        // 5! = 5*4*3*2*1
+        // 7! = 7*6*5*4*3*2*1
+        // 4!
+        /*
+
+        1*1 =1
+        1*2 =2
+        2*3= 6
+        6*4= 24
+
+         */
+        int numeroCalcular=4;
+        int factorial = 1;
+        for (int i = 1; i <= numeroCalcular; i++) {
+            factorial = factorial* i;
+        }
+        System.out.printf("El factorial de %d es %d",numeroCalcular,factorial);
+
+
+    }
+
+    public void recorrerColeccion(){
+        int[] numeros = {1,10,90,40,98,76,53};
+        // un armario de n posiciones 1,10,90,40
+        // [0,3]
+        // [3,0]
+        /*for (int i = 0; i < numeros.length; i++) {
+            System.out.println(numeros[i]);
+        }*/
+        for ( int item : numeros ){
+            System.out.println(item);
         }
     }
 }

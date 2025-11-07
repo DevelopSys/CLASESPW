@@ -1,0 +1,29 @@
+ESTRUCTURAS DE SELECCION
+
+IF -> evalua una condicion cuyo resultado es un booleano
+	  selecciono el cuerpo de la parte cuyo resultado es true
+
+	  if / if esle / if else if else
+
+SWITCH -> evalua un valor determinado y dependiendo de este se ejecutara un caso u otro.
+		  se evaluan: char / string / int
+
+
+ESTRUCTURAS DE REPETICION
+
+repiten un conjunto de lineas de codigo siempre y cuando un rango o una condicion logica se cumpla
+
+FOR -> PARA un rango determinado quiero ejecutar unas lineas de codigo (repite)
+
+DESDE NUMERO, HASTA NUMERO, INCREMENTO(3)  [0-5] [0,10)
+
+El for se suele utilizar para poder recorrer una coleccion de datos
+	coleccion de datos: conjunto de valores guardados en una variable -> array
+
+WHILE / DO-WHILE
+
+repiten un bloque de codigo dependiendo de una condicion que tiene como resultado un boolean. Si la condicion de repeticion es verdad, se vuelve a ejecutar el bloque
+
+el while, al evaluar primero la condicion no garantiza una ejecicion -> se ejecuta desde 0 veces a n veces
+
+do-while, primero se ejecuta y luego se evalua la condicion. de forma que aseguro AL MENOS 1 ejecucion -> se ejecuta de 1 a n veces
