@@ -1,0 +1,23 @@
+IF
+SWITCH -> ENUM
+FOR 
+WHILE
+DO WHILE
+
+CONTINUE -> "saltaba la iteracion"
+BREAK -> rotura del iterador mas proximo
+RETURN -> rotura del metodo. La ultima linea del metodo
+
+Model -> M
+
+Main -> V
+
+Controller -> C
+
+BUENAS PRACTICAS
+
+1 - Separa funcionalidades en metodos
+2 - Intenta utilizar los menos static posibles
+3 - uso de los return dentro de los metodos
+4 - return / break usalos en iteraciones no profundas 
+5 - no anides mas de 2 repeticiones 
