@@ -17,7 +17,7 @@ public class Controller {
     }
 
     public String[] getCorreos(){
-        
+
         return correos;
     }
 
