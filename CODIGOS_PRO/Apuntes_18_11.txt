@@ -7,7 +7,7 @@ Variables
 Estructuras de datos -> variables compleja - guardar varios datos dentro de un mismo puntero
 	Estaticas: aquellas que no pueden alterar su tamaño [ , , , ]
 		Array unidimensional: aquel que solo tiene una fila con b columna: armario con huecos
-		Array bidimensional: aquel que tiene n filas y en cada una de ellas hay n columnas. Matriz
+		Array multidimensional: aquel que tiene n filas y en cada una de ellas hay n columnas. Matriz
 
 	Dinámico: aquella que puede alterar su tamaño
 		Basadas en posiciones: ArrayList
