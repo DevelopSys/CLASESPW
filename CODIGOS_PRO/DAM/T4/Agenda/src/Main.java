@@ -47,5 +47,15 @@ public class Main {
             }
             System.out.println();
         }
+
+        /*
+        final int dato = 2;
+        switch (true){
+            case dato<2->{}
+            case dato>=2->{}
+
+        }
+
+         */
     }
 }

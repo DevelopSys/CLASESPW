@@ -2,6 +2,7 @@
 public class Sudoku {
     private int[][] cuadrado = new int[4][4];
 
+
     public void iniciarCuadrado(){
         System.out.println("Procedemos a iniciar el sodoku");
         rellenarNumeros();
