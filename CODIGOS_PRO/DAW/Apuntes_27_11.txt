@@ -1,0 +1,23 @@
+REPASO 
+Array unidimensionales -> lista de "mismos" elementos. Tamaño finito
+	int[] numeros = new int[5]
+	// [0,0,0,0,0]
+	String[] palabras = new String[4]
+	// [null,null,null,null]
+	int[] numeros = new int[]{1,5,7,12,10}
+	int[] numeros = {1,5,7,12,10}
+	// [1,5,7,12,10]
+	// saber la longitud -> cantidad de elementos
+	numeros.length
+	// sabes un elemento concreto
+	numeros[4] -> tenemos que saber que los accesos empiezan en 0
+	// modificar un elemento concreto
+	numeros[4] = 5;
+	// acceder a todos los elementos
+	// for -> acceder/modificar o foreach -> acceder
+
+Array bidimensional -> lista de elemetos. Tamaño fijo, con la diferencia que ahora tengo en cada hueco puedo guardar multiples elementos
+	numero filas - numero de columnas
+
+
+
