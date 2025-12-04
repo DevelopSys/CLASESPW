@@ -32,7 +32,7 @@ public class Main {
         System.out.println("Imprimiendo bombo 2");
         imprimiendoBombo(bombo2);
 
-        
+
     }
 
     public static void imprimiendoBombo(String[] bombo){
