@@ -6,7 +6,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Integer> listaNumeros = new ArrayList<>();
         ArrayList<String> listaPalabras = new ArrayList<>();
-        // [1,2,123,123,123,123,123,123,123,123,123,123,123,123,123]
+        // [1,1,1,12,31,23,123,1,23,1,23,12,3,123,1,23,123]
         // añadir un elemento
         /*for (int i = 0; i < 20; i++) {
             listaNumeros.add((int) (Math.random()*21)); // -> se guarda en la posicion 0

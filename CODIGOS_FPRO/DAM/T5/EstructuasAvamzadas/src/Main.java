@@ -17,7 +17,9 @@ public class Main {
         listaCosas.remove(1);
         System.out.println("El tamaño actualizado es de " + listaCosas.size());
         System.out.println("El elemento en posicion 1 es " + listaCosas.get(1));
-
+        for (int i = 0; i < listaCosas.size(); i++) {
+            System.out.println(listaCosas.get(i));
+        }
 
         // tamaño es fijo -> estructuras estaticas
         /*
