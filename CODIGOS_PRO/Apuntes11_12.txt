@@ -1,0 +1,40 @@
+Primitivas
+	int numero = 10;
+Compleja
+	String nombre = "Borja"
+	borja.martin@proeducaglobal.com
+
+PROGRAMACION ORIENTADA A OBJETOS
+
+Abstraccion
+Encapsulamiento -> cada tipo de dato solo maneja sus propiedades
+Polimorfismo
+
+Clases -> utilizado para tener un main y que pueda dar al play
+	-> POO. Crear el "molde/base/estructura" de un tipo de dato, que tendra una realidad individual
+	Su nombre es: Mayuscula y en singular
+	"Todas" las variables complejas para su creacion se utiliza la palabra reservada new
+
+	- Atributos - variables: aquellas cosas que caracterizan / cualifican al objeto -> sustantivos
+	- Metodos: definicion de las funcionalidades o comportamientos que el objeto tiene -> verbos
+		- Constructores: 1 maximo "N" (alteraciones de atributos). Escribe tantos como tengas necesidad
+		- Getter / Setter: siempre tienen que estar
+			- Getter: obtienen el valor de un atributo, pudiendo llamar desde otros sitios
+			- Setter: modifican el valor de un atributo, pudiendo llamar desde otros sitio
+
+Minecraft
+	Jugadores1
+		nombre, nivel, atributos, cantidadBloques
+		andar, picar, comprar, construir
+	Jugadores2
+		nombre, nivel, atributos, cantidadBloques
+		andar, picar, comprar, construir
+	Jugadores3
+		nombre, nivel, atributos, cantidadBloques
+		andar, picar, comprar, construir
+	Jugadores4
+		nombre, nivel, atributos, cantidadBloques
+		andar, picar, comprar, construir
+	Jugadores5
+		nombre, nivel, atributos, cantidadBloques
+		andar, picar, comprar, construir
