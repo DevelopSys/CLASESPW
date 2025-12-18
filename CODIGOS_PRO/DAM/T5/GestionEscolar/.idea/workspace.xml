@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="554f7317-042a-4c5d-96ae-bf7b88af991e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/Colegio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Alumno.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Asignatura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Profesor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DAW/T5/Objetos/src/resources/lombok.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/lombok.jar" afterDir="false" />
-    </list>
+    <list default="true" id="554f7317-042a-4c5d-96ae-bf7b88af991e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
