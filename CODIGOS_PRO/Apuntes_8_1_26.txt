@@ -1,0 +1,72 @@
+REPASO
+POO -> Programacion orientada a objetos
+	Clase -> public class Alumno(){} -> molde de lo que será un objeto
+		atributos -> cualifican al objeto. private nombre;
+		constructores -> minimo -> 1 -> con firmas diferentes -> public NombreClase(){}
+		metodos -> funcionalidad al futuro objeto -> con firmas diferentes -> public void nombreMetodo(parametros){}
+			getter / setter -> acceder a las variables / modificar el valor de una variable
+	Clase ->
+		main -> Alumno borja = new Alumno()
+				borja.metodos definidos
+
+------------------------------
+HERENCIA -> obtener "algo" de alguien.
+			Padres -> Hijo -> Hijos
+			Solo se puede heredar de una clase al mismo tiempo
+			En herencia no se heredan 
+				los constructores -> heredarlos manualmente -> mediante la palabra reservada super() -> en la primera linea
+				las variables o metodos privados -> no se heredan
+			Superclase: clase de la cual hereda otra clase, utilizando una palabra reservada extends
+			Abstractos -> 
+
+POLIMORFISMO -> Capacidad de "vestir" de varias formas un elemento
+
+	ClaseA
+	private int atributoA, atributoB
+	public double atributoC
+	constructor(int, int)
+	metodo1()
+	{
+		sout("Hola")
+	}
+	metodo2()
+	{
+		sout("Adios")
+	}
+	getter()
+	setter()
+
+	ClaseB extends ClaseA
+	// atributoC
+	// metodo1()
+	@Override
+	metodo2(){
+
+		sout("Nuevo")
+		super.metodo2()
+		
+	}
+	// getter()
+	// setter()
+	metodo3(){}
+
+	ClaseC extends ClaseB
+	// atributoC
+	// metodo1()
+	// metodo2()
+	// getter()
+	// setter()
+	// metodo3()
+	metodo4()
+
+
+	ClaseEntrada
+
+	main(){
+		ClaseA objeto1 = new ClaseA();
+		objeto1.metodo1() -> "Hola"
+		objeto1.metodo3()
+		ClaseA objeto2 = new ClaseB();
+		((ClaseB)objecto2).metodo3
+		objeto2.metodo3()
+	}
