@@ -1,0 +1,46 @@
+REPASO
+
+Arrays -> estatica -> elementos asociados a posiciones primera: 0 ultima: length-1
+	no se pueden agregar elementos
+		[ D1,D2,D3,D4,D5,D6 ]
+		   0. 1. 2. 3. 4. 5
+		int[] n = int[9] -> 0 0 0 0 0 0 0 0 0
+		int[] n = int[]{1,2,3,4,5}
+		for -> recorrer
+		n[1] = 1;
+		n[2] = -1;
+		n[3] = null
+		sort
+
+ArrayList -> dinamica -> elementos asociados a posiciones primera: 0 ultima: size-1 -> Iterables 
+	[ D1,D2,D3,D4,D5,D6 ]
+	   0. 1. 2. 3. 4. 5
+	ArrayList<Integer> lista = new ArrayList() -> [1,2,3,4,5,6,7]
+	ArrayList<Integer>
+	ArrayList<Personas>
+	add
+	remove
+	removeIf
+	get -> for / foreach
+
+HashMap / HashTable -> dinamica -> elementos pero no asociados a posiciones. Asociados a un dato (key)
+	[ D1.      ,D3, D2 ]
+	  dni1.,  dni3, dni2
+
+	  P1, A1, dni1
+	Personas - {nombre, apellido, dni}
+	v->[p1, p2 , p3, p4]
+	k-> 12  34   45  54
+	HashMap<K,V>
+	HashMap<String,Persona>
+	put(K,V)
+	remove(K)
+	get(K) -> V
+	keys() -> Set<K> -> get
+	values() -> Set<V> 
+
+	[]
+
+
+
+
