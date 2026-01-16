@@ -9,6 +9,8 @@ public abstract class Persona {
         this.apellido = apellido;
     }
 
+    public Persona(){}
+
     public abstract void saludar();
 
     public void mostrarDatos(){

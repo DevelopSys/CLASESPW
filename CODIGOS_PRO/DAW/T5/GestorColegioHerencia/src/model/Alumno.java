@@ -1,10 +1,12 @@
 package model;
 
-public class Alumno extends Persona {
+public final class Alumno extends Persona {
     private int numeroMatricula, cursoMatriculado;
     // getter / setter
     // mostrarDatos
     // saludar
+
+    public Alumno(){}
 
     public Alumno(String nombre, String apellido, int numeroMatricula){
         super(nombre,apellido);
@@ -16,6 +18,7 @@ public class Alumno extends Persona {
         this.numeroMatricula = numeroMatricula;
         this.cursoMatriculado = cursoMatriculado;
     }
+
 
 
     @Override
