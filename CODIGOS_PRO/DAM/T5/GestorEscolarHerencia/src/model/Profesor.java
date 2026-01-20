@@ -1,6 +1,6 @@
 package model;
 
-public class Profesor extends Persona{
+public abstract class Profesor extends Persona{
 
     private int salario, nExperiencia;
 

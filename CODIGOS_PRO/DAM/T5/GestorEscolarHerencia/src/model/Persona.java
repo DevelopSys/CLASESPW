@@ -5,16 +5,9 @@ public abstract class Persona {
     private String nombre, apellido;
 
     // TODO: me olvido del constructor vacio -> mas adelante
-    public Persona(){
-
-    }
+    public Persona(){}
 
     public Persona(String nombre, String apellido) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-    }
-
-    public Persona(String nombre, String apellido, String asdasd) {
         this.nombre = nombre;
         this.apellido = apellido;
     }

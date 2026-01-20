@@ -1,6 +1,6 @@
 package model;
 
-public class Alumno extends Persona {
+public class Alumno extends Persona implements Manifestable {
     private int nMatricula;
     private String curso;
 
@@ -48,5 +48,10 @@ public class Alumno extends Persona {
 
     public void setCurso(String curso) {
         this.curso = curso;
+    }
+
+    @Override
+    public void manifestar() {
+
     }
 }
