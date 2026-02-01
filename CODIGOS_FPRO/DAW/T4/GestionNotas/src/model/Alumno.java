@@ -4,6 +4,7 @@ public class Alumno {
     private String nombre, apellido, dni;
     private int nota;
 
+    public Alumno(){}
     public Alumno(String nombre, String apellido, String dni, int nota){
         this.nombre = nombre;
         this.apellido = apellido;
@@ -15,12 +16,12 @@ public class Alumno {
     public Alumno(String nombre, String apellido, String dni){
         // this(nombre,apellido,dni,-1);
         // this(nombre,apellido,dni,0);
-        // nota = 0
         /*this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
         this.nota = -1;*/
         this(nombre,apellido,dni,-1);
+        nota = -1;
     }
 
     public void mostrarDatos(){
