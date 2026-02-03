@@ -1,0 +1,29 @@
+Lamda -> public void nombre(arg){return}
+		  item -> cuerpo .Si utilizo una lmb el retorno es implicito. Solo se puede 				hacer con lmb de una sola linea
+		  item -> {
+		  			return cuerpo;
+		  		  }
+		  		  		.Si pongo las llaves, explicitamente pongo la palabra return
+
+		  coleccion.foreach(item->cuerpo)
+
+		  coleccion.foreach(p->body)
+		  coleccion.stream().map()
+
+		  alumnos -----------------------
+		  stream  -----------------------
+		  map.    -----------------------
+		  actua
+
+
+Metodos directos -> aquellos que se pueden ejecutar directamente llamando al nombre de la clase :: nombre del metodo
+			Para poder utilizar un metodo directo, se define implicitamente el parametro de uso. Solo son candidatos a metodos directos, aquellos que no tienen parametros
+		
+		alumno.mostrarDatos()
+		Alumno.mostrarDatos()
+		Alumno::mostrarDatos
+
+
+Bifunction<G1,G2,G3> -> funcion 3 parametros, los 2 primeros son los tipos que la funcion admite. el tercero es el tipo de retono que obtenemos. Para ejecuatar una funcion se utiliza el metodo apply. Callback
+
+BiConsumer<G1,G2> -> funcion 2 parametros, el 1º es el tipo de dato que admite la funcion. el 2º es el retorno de la funcion.  Callback -> find/match/filter
