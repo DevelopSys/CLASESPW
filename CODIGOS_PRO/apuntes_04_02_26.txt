@@ -1,0 +1,62 @@
+EXCEPCIONES
+
+Asegurar la disponibilidad de mi programa
+
+Codificando
+	Error -> un error es un codigo mal escrito, porque la variable no tiene el tipo correcto, porque la variable no tiene la asignacion necesaria. El compilador no juega papel alguno
+	Fallo -> Fallo producido en el proceso de compilacion o de ejecucion
+		Exception
+			RunTime -> en momento de ejecucion. No es obligatorio capturar
+				NullPointer
+				StringIndexOutOfBounds
+				ArrayIndexOutofBounds
+				InputMissMatch
+				Arithmetic
+				CastClassExcepcion
+
+			IOException -> se producen con accesos a elementos externo
+				Acceso a fichero, URL. De obligada captura
+
+	Como buena exception, es capturable
+
+Como se captura una excepcion
+
+	- try/catch/finally -> resolver el problema en el sitio donde se produce
+		
+		try-intenta
+			L1
+			L2 -> NullPointEx
+			L3 
+			L4 -> IndexOutOfBoundEx
+			L5
+			L6 -> ArithEx
+			L7
+
+		catch IOException
+			ejecuto cuando hay fallo
+			L8.2
+		catch Exception -> captura
+			ejecuto cuando hay fallo
+			L8.1
+		
+		finally -> ejecuta si o si
+			
+			L9
+
+		L10
+
+	- throws -> pongo "aviso" al metodo que puede producir el fallo para cuando se utilizado que se sepa y si se quiere que se capture
+
+
+Lanzar excepciones - tanto personalizadas como existentes
+
+
+
+
+
+
+
+
+
+
+

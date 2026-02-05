@@ -1,0 +1,25 @@
+NullPointerException -> 
+IndexOutBoundException ->
+ArithException -> 
+InputMissMatchException -> 
+ClassCastException -> 
+IOException -> 
+SQLException -> 
+
+File -> Fichero -> io / nio
+	Consola -> sout soutln
+	Entrantes -> Input / Lecturas
+	Salientes -> Output / Escrituras
+
+File -> directory -> carpeta
+		file -> archivo final con extension
+
+File -> Ruta -> C:/users/borja/documentos/proyecto/cosas/a.txt
+			absolutas -> indicada desde el inicio del sistema
+				C:/users/borja/documentos/proyecto/cosas/a.txt
+				windows -> C:\\users\\borja\\documentos\\proyecto\\cosas\\a.txt
+			relativas -> indicado desde el punto de ejecucion
+			    ./cosas/a.txt
+	->	Concepto 
+			- definicion logica: aunque la ruta no exista el objeto en programacion si existe
+			- definicion fisica: si existe, accedera a todas sus caracteristicas

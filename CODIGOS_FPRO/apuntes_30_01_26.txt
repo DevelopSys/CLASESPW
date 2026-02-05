@@ -1,0 +1,10 @@
+BIFunction -> funciones especiales que admiten 3 parametros en definicion. Los dos primeros son los argumentos de entrada y el 3er parametro es el retono de la funcion
+	las podemos utilizar como funciones callback -> una funcion que se ejecuta tras otra funcion
+
+
+BiPredicate -> funciones especiales que admiten 2 parametros, el primero es el argumento de entrada y el 2º es el retorno de la funcion
+
+Lamda ->  param -> cuerpo
+
+Metodos de acceso directo -> No necesitan del objeto explicito para funcionar a.mostrarDatos(). Con un acceso directo -> Alumno::nombreMetodo implicitamente es llamado por el objeto de la clase. Solo se puede utiliza con metodos que NO tengan parametros
+

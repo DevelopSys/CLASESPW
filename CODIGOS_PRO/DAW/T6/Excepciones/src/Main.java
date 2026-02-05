@@ -1,3 +1,5 @@
+import utils.ResultadoException;
+
 import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -19,11 +21,13 @@ public class Main {
             int operando1 = scanner.nextInt();
             System.out.println("Indicame el operando uno");
             int operando2 = scanner.nextInt();
-            operaciones.sumar(operando1,operando2); // va con la etiqueta que puede provocar error Arth
+            operaciones.operar(operando1,operando2); // va con la etiqueta que puede provocar error Arth
         } catch (InputMismatchException e){
             System.out.println("error en la introduccion de los datos");
         } catch (ArithmeticException e){
             System.out.println("Division entre cero, le pongo solucion");
+        } catch (Exception e){
+
         }
         /*do {
             try {
