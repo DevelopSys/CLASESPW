@@ -1,0 +1,34 @@
+Streams -> Flujos de datos
+
+	IO -> Exception obligatorias
+
+	Entrantes -> Input -> desde fuera del sistema hacia dentro
+	Salientes -> Output -> desde dentro del sistema hacia fuera
+
+	Scanner sc = new Scanner(System.in)
+	System.out.println("Datos")
+
+	Ficheros -> java.io / java.nio
+
+		File -> Fichero / Carpeta
+			
+			logicos: aquel que no existen en la ruta determinada /users/borja/mifichero.txt
+			fisicos: logico y fisico ya que existe en el almacenamiento
+
+			rutas relativas: aquella que se refiere desde donde estas en adelante ./
+			rutas absolutas: aquella que se refiere desde el inicio del volumen C:/ o /
+			ruta UNC: la ruta universal que utilizaremos para nombrar path
+				windows: C:/asd/asd/asd/asd -> C://asd//asd//asd//asd
+				linux: 	 /asd/asd/asd/asd -> /asd/asd/asd/asd
+
+Stream
+    input - lectura
+    output -> escritura
+
+    Que datos transaccionas al fichero
+
+    texto plano -> .txt -> ASCII
+        FILE -> FILEREADER (caracter (numero) a carecter (numero)) -> BUFFEREDREADER (linea (string) a linea (string))
+        FILE -> FILEWRITER (caracter (numero) a carecter (numero)) -> BUFFEREDWRITER (linea (string) a linea (string)) / PRINTWRITER
+    objeto -> .obj .bin -> new Persona 9 Integer
+

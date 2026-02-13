@@ -2,13 +2,11 @@ package controller;
 
 import model.Alumno;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.OptionalDouble;
+import java.util.*;
+import java.util.function.BiPredicate;
 
 public class Gestor {
-    private ArrayList<Alumno> alumnos;
+    private List<Alumno> alumnos;
     private HashMap<String, Alumno> alumnosMap;
 
     public Gestor() {
@@ -66,6 +64,7 @@ public class Gestor {
     }
 
     public void mostrarUsuarios() {
+
         alumnos.forEach(Alumno::mostrarDatos);
     }
 
@@ -79,7 +78,7 @@ public class Gestor {
             media += item.getNota();
         }
         media /= alumnos.size();*/
-        double media = alumnos.stream().mapToDouble(Alumno::getNota).sum()/alumnos.size();
+        double media = alumnos.stream().mapToDouble(Alumno::getNota).sum() / alumnos.size();
         System.out.println(media);
         /*
         alumnos -------------- Alumnos
@@ -87,4 +86,72 @@ public class Gestor {
         map     -------------- Doubles (operables)
          */
     }
+
+    // cuantos aprobados tengo en la lista
+    public long getNumeroAprobados() {
+        // recorro, pregunto >=5 sumatorio
+        /*int numeroAprobados=0;
+        for (Alumno a: alumnos ) {
+            if(a.getNota()>=5){
+                numeroAprobados++;
+            }
+        }*/
+        /*
+        ----------------------
+        ------------
+         */
+        // return alumnos.stream().filter(item->item.getNota()>=5).count();
+        return getAprobados().size();
+
+    }
+
+    public List<Alumno> getAprobados() {
+         /*ArrayList<Alumno> aprobados = new ArrayList<>();
+       alumnos.stream().filter(item-> {
+            if (item.getNota()>=5){
+                aprobados.add(item);
+            }
+        });*/
+
+        return alumnos.stream().filter(item -> item.getNota() > 4).toList();
+    }
+
+    public Optional<Alumno> buscarDNI(String dni) {
+        // si el correo que estas buscando no esta -> null
+        /*for (Alumno a : alumnos) {
+            if (a.getDni().equals(dni)){
+                return a;
+            }
+        }
+        return null;*/
+        return alumnos.stream().filter(item -> item.getDni().equals(dni)).findFirst();
+        // return alumnos.stream().findAny();
+    }
+
+    public void ordenarAlumnos() {
+        /*alumnos.sort(new Comparator<Alumno>() {
+            @Override
+            public int compare(Alumno o1, Alumno o2) {
+                if (o1.getNota() > o2.getNota()) {
+                    return 1;
+                } else if (o1.getNota() < o2.getNota()) {
+                    return -1;
+                }
+                return 0;
+            }
+        });*/
+        alumnos = alumnos.stream().sorted(Comparator.comparingInt(Alumno::getNota).reversed()).toList();
+        // alumnos.forEach(Alumno::mostrarDatos);
+    }
+
+    // obtener los alumnos que tengan una nota > 7.5
+    public List<Alumno> getAlumnosNota(int nota) {
+        return (ArrayList<Alumno>)alumnos.stream().filter(item -> item.getNota() > 7.5).toList();
+    }
+
+    public List<Alumno> getAlumnosNota(BiPredicate<Alumno, Double> predicado, double nota) {
+        return alumnos.stream().
+                filter(item -> predicado.test(item, nota)).toList();
+    }
+
 }

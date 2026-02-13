@@ -1,0 +1,3 @@
+Este fichero sera un ejemplo de lectura dentro de nuestro codigo de programacion
+Esta es otra fila del fichero para poder obtener una segunda lectura
+Esta tercera fila cerrara el fichero

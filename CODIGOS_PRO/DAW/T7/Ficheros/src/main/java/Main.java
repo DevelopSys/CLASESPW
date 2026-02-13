@@ -4,7 +4,8 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) {
-        //File fichero = new File("src/main/java/resource/analisis_secundario.txt");
+        /*
+        //File fichero = new File("src/main/java/resource/analisis_codigos.txt");
         File carpeta = new File("src/main/java/resources/carpeta1");
         // logico o fisico?
         /*System.out.println("Informacion del fichero");
@@ -24,11 +25,11 @@ public class Main {
                 // solucion -> indica otra ruta para crear el fichero
                 // pongase en contacto con el admin
             }
-        }*/
+        }
         if (carpeta.isDirectory()) {
             /*for (String item : carpeta.list()) {
                 System.out.println(item);
-            } */
+            }
             for (File item: carpeta.listFiles()) {
                 System.out.println(item.getName());
                 System.out.println(item.isDirectory());
@@ -47,7 +48,12 @@ public class Main {
         }
 
         // carpeta.createNewFile();
-
-
+*/
+        Operaciones operaciones = new Operaciones();
+        // operaciones.leerFichero("src/main/java/resources");
+        // operaciones.leerContenidoFichero("srasdasdc/main/java/resources/analisis.txt");
+        // operaciones.leerContenidoFicheroLineas("src/main/java/resources/analisis.txt");
+        operaciones.descifrarContenido("src/main/java/resources/escritura.txt");
+        // operaciones.escrituraFichero("src/main/java/resources/escritura.txt");
     }
 }

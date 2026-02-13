@@ -3,12 +3,11 @@ package controller;
 import model.Alumno;
 
 import javax.lang.model.type.MirroredTypeException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.OptionalDouble;
+import java.util.*;
+import java.util.function.BiPredicate;
 
 public class Gestor {
-    private ArrayList<Alumno> alumnos;
+    private List<Alumno> alumnos;
     private HashMap<String, Alumno> alumnosMap;
 
     public Gestor() {
@@ -63,6 +62,21 @@ public class Gestor {
         });*/
     }
 
+    public void ordenarNotas(){
+        // recorro y comparo de 2 en 2
+        /*Collections.sort(alumnos, new Comparator<Alumno>() {
+            @Override
+            public int compare(Alumno o1, Alumno o2) {
+                if(o1.getNota()>o2.getNota()){
+                    return -1;
+                } else {
+                    return 1;
+                }
+            }
+        });*/
+        alumnos = alumnos.stream()
+                .sorted(Comparator.comparingInt(Alumno::getNota).reversed()).toList();
+    }
     public void mostrarAlumnos() {
         /*
         alumnos.forEach(item -> {
@@ -75,25 +89,23 @@ public class Gestor {
         alumnos.forEach(Alumno::mostrarDatos);
         // alumnosMap.values().forEach(Alumno::mostrarDatos);
     }
-
     public void calificarAlumnos() {
         /*
         alumnos ---------------
         stream  x--x---x-------
          */
         alumnos.forEach(item -> {
-            if(item.getNota()==-1){
+            if (item.getNota() == -1) {
                 item.setNota((int) (Math.random() * 11));
             }
         });
     }
-
-    public void calcularMedia(){
+    public void calcularMedia() {
         // variable sumatorio
         // foreach
         // suma
         // divido
-        double acumulador=0;
+        double acumulador = 0;
         // alumnos.stream().map(item->item.getNota()).forEach(item->acumulador+=item)/size;
         // double media = alumnos.stream().mapToDouble(Alumno::getNota).sum()/alumnos.size();
         OptionalDouble media = alumnos.stream().mapToDouble(Alumno::getNota).average();
@@ -105,4 +117,66 @@ public class Gestor {
         mapDouble     ---------------
          */
     }
+    // el numero de usuario que han aprobado
+    public long getNumeroAprobados() {
+        // recorro, pregunto, incremento
+        /*int nAP =0;
+        for ( Alumno alumno: alumnos ) {
+            if (alumno.getNota()>=5){
+                nAP++;
+            }
+        }
+        return nAP;*/
+        return alumnos.stream().filter(item -> item.getNota() >= 5).count();
+    }
+    public List<Alumno> getAprobados() {
+        // recorro - pregunto y añado list
+        /*ArrayList<Alumno> filtrados = new ArrayList<>();
+        for (Alumno alumno: alumnos) {
+            if (alumno.getNota()>=5){
+                filtrados.add(alumno);
+            }
+        }
+
+        alumnos.forEach(item->{
+            if(item.getNota()>=5){
+                filtrados.add(item);
+            }
+        });*/
+
+        return alumnos.stream()
+                .filter(item -> item.getNota() >= 5).toList();
+
+        /*
+        ------------------------
+        ------
+         */
+
+    }
+    public Optional<Alumno> getAlumnoByDNI(String dni) {
+        // recorro y pregunto
+        // con filter obtengo un -----
+        /*
+        ---------------------
+        -
+         */
+
+        /*for (Alumno item: alumnos) {
+            if (item.getDni().equals(dni)){
+                return item;
+            }
+        }
+        return null;*/
+        return alumnos.stream().filter(item -> item.getDni().equals(dni)).findFirst();
+    }
+
+    public void getAlumnosUmbral(int nota){
+        alumnos.stream().filter(item->item.getNota()>=nota).forEach(Alumno::mostrarDatos);
+    }
+
+    public void getAlumnosUmbral(BiPredicate<Alumno,Integer> predicate, int nota){
+        // recorrer - preguntar por el predicado - recorrer el resultado - mostrar datos
+        alumnos.stream().filter(item->predicate.test(item,nota)).forEach(Alumno::mostrarDatos);
+    }
+
 }

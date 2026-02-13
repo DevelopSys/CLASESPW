@@ -1,0 +1,28 @@
+io / nio
+
+File -> creacion / informacion
+
+
+FICHERO		->				SISTEMA (JAVA)      ->     FICHERO
+input: lecturas
+output: escrituras
+
+texto plano -> .txt ASCII -> 0 - 255 -> 1byte 11111111 
+	54 -> "6"
+	"54" -> "54"
+	false -> "false"
+
+bit a bit -> fileReader
+linea a linea -> buffererReader
+
+bit a bit -> fileWritter
+linea a linea -> bufferedWritter / PrintWritter
+
+objeto -> .obj / .bin
+
+	54 -> Integer 54
+	false -> Boolean false
+	Usuario -> new Usuario() -> tiene que estar serializado
+
+
+Usuario() -> mostrarDatos() -> string nombre,apellido,correo
