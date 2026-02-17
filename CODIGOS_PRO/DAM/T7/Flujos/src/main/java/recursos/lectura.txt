@@ -1,0 +1,27 @@
+Esto es un ejemplo de lectura de ficheros
+Esto es otra linea en el fichero
+Los flujos de ficheros:
+    Entrantes: lecturas -> obtengo el contenido
+    Salientes: escrituras -> saco el contenido
+    File -> carpeta (directory / file)
+        si es fichero -> createNewFile()
+        si es carpeta -> mkdir o mkdirs
+
+Texto plano -> .txt -> ASCII
+Todos los flujos deben cerrarse
+Lecturas
+    File -> (ponlo en modo lectura) FileReader - caracter a caracter -> BufferedReader (lectura "grande") - linea a linea
+
+Escritura
+    File -> (ponlo en modeo escritura) FileWriter - caracter a caracter -> BufferedWriter (puedo poner un salto de linea)
+
+// realizar un programa que permita gestionar los usuario de una agenda.
+    - Se pedira nombre, dni y correo.
+    - Se guardara en un arraylist -> meter 10 usuarios (se peude hacer mediante un menu)
+    - Generar un fichero txt con todos los datos de los usuarios con la estructura nombre, dni, correo -> exportacion de arraylist a fichero
+    - Nada mas arrancar el programa llenar el arraylist con todos los usuarios del fichero -> importacion desde txt a arraylis
+
+
+
+
+Objectos -> .bin -> Integer / Boolean / String / Usuario / Arraylist -> guarda datos java
