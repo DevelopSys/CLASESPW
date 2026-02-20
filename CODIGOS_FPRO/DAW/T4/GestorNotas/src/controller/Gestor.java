@@ -1,7 +1,14 @@
 package controller;
 
 import model.Producto;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.util.*;
 import java.util.function.BiPredicate;
 
@@ -80,6 +87,42 @@ public class Gestor {
     public List<Producto> getProductosPorCondicion(BiPredicate<Producto, Double> condicion
             , double valor) {
         return productos.stream().filter(item -> condicion.test(item, valor)).toList();
+    }
+
+    public DoubleSummaryStatistics getEstadisticas() {
+        return productos.stream()
+                .mapToDouble(Producto::getPrecio)
+                .summaryStatistics();
+    }
+
+    public void obtenerProductosAPI() {
+        HttpClient client = null;
+        try {
+            String urlProductos = "https://dummyjson.com/products"; // @Body
+            // "abro el navegador"
+            client = HttpClient.newHttpClient();
+            // "crea la peticion"
+            HttpRequest request = HttpRequest.newBuilder().uri(URI.create(urlProductos)).build();
+            // "lanza la peticion y espera una respuesta"
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            String body = response.body();
+            JSONObject jsonObject = new JSONObject(body);
+            JSONObject producto1 = jsonObject.getJSONArray("products").getJSONObject(28);
+            System.out.println(producto1.getString("title"));
+        } catch (IOException e) {
+            System.out.println("Error en de I/O");
+        } catch (InterruptedException e) {
+            System.out.println("Error en la conexion");
+        } finally {
+            try {
+                client.close();
+            } catch (Exception e){
+                System.out.println("Error en el cerrado");
+            }
+
+        }
+
+
     }
 
 }

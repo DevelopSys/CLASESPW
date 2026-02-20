@@ -1,5 +1,4 @@
-import java.io.File;
-import java.io.IOException;
+import controller.Operaciones;
 
 public class Main {
 
@@ -53,7 +52,9 @@ public class Main {
         // operaciones.leerFichero("src/main/java/resources");
         // operaciones.leerContenidoFichero("srasdasdc/main/java/resources/analisis.txt");
         // operaciones.leerContenidoFicheroLineas("src/main/java/resources/analisis.txt");
-        operaciones.descifrarContenido("src/main/java/resources/escritura.txt");
+        // operaciones.descifrarContenido("src/main/java/resources/escritura.txt");
         // operaciones.escrituraFichero("src/main/java/resources/escritura.txt");
+        // operaciones.escrituraSalto("src/main/java/resources/carpeta1/ejemplo_salto.txt");
+        operaciones.escribirObjeto("src/main/java/resources/objetos.dat");
     }
 }

@@ -1,0 +1,4 @@
+1Me imprime la linea dentro del fichero y luego salto de linea
+2Me imprime la linea dentro del fichero y luego salto de linea
+3Me imprime la linea dentro del fichero y luego salto de linea
+4Me imprime la linea dentro del fichero y luego salto de linea
