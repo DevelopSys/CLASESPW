@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "nombre": "Borja",
+      "apellido": "Martin",
+      "edad": 42,
+      "asignaturas": [
+        { "nombre": "programacion", "curso": "dam", "nivel": 1 },
+        { "nombre": "programacion", "curso": "daw", "nivel": 1 },
+        { "nombre": "acceso a datos", "curso": "dam", "nivel": 2 },
+        { "nombre": "desarrollo cliente", "curso": "daw", "nivel": 2 }
+      ]
+    },
+    {
+      "nombre": "Juan",
+      "apellido": "Martin",
+      "edad": 42,
+      "asignaturas": [
+        { "nombre": "programacion", "curso": "dam", "nivel": 1 },
+        { "nombre": "programacion", "curso": "daw", "nivel": 1 }
+      ]
+    },
+    {
+      "nombre": "Claudia",
+      "apellido": "Martin",
+      "edad": 42,
+      "asignaturas": [
+        { "nombre": "desarrollo cliente", "curso": "daw", "nivel": 2 }
+      ]
+    }
+  ],
+  "count": 2,
+  "skip": 20
+}

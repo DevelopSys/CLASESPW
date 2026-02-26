@@ -55,6 +55,7 @@ public class Main {
         // operaciones.descifrarContenido("src/main/java/resources/escritura.txt");
         // operaciones.escrituraFichero("src/main/java/resources/escritura.txt");
         // operaciones.escrituraSalto("src/main/java/resources/carpeta1/ejemplo_salto.txt");
-        operaciones.escribirObjeto("src/main/java/resources/objetos.dat");
+        // operaciones.escribirObjeto("src/main/java/resources/objetos.dat");
+        operaciones.lecturaObjeto("src/main/java/resources/objetos.dat");
     }
 }

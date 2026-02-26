@@ -193,6 +193,7 @@ public class Operaciones {
 
 
     }
+
     public List<Usuario> importarUsuarios() {
         File file = new File("src/main/java/resources/usuarios.csv");
         BufferedReader reader = null;
@@ -202,7 +203,7 @@ public class Operaciones {
             String linea = reader.readLine();
             while ((linea = reader.readLine()) != null) {
                 String[] items = linea.split(","); // quiero pasarla a -> split -> usuario
-                Usuario usuario = new Usuario(items[0],items[1],items[2]);
+                Usuario usuario = new Usuario(items[0], items[1], items[2]);
                 lista.add(usuario);
             }
         } catch (FileNotFoundException e) {
@@ -215,24 +216,49 @@ public class Operaciones {
         return lista;
     }
 
-    public void escribirObjeto(String path){
+    public void escribirObjeto(String path) {
         File file = new File(path);
         ObjectOutputStream objectOutputStream = null;
         try {
             objectOutputStream = new ObjectOutputStream(new FileOutputStream(file));
             // objectOutputStream.write(76);
-            objectOutputStream.writeObject(new Usuario("Borja","Martin","123123"));
+            ArrayList<Usuario> lista = new ArrayList<>();
+            lista.add(new Usuario("Usuario1", "Apellido1", "123A"));
+            lista.add(new Usuario("Usuario2", "Apellido2", "223A"));
+            lista.add(new Usuario("Usuario3", "Apellido3", "323A"));
+            lista.add(new Usuario("Usuario4", "Apellido4", "423A"));
+            lista.add(new Usuario("Usuario5", "Apellido5", "523A"));
+            objectOutputStream.writeObject(lista);
 
         } catch (IOException e) {
             System.out.println("Error en la escritura del fichero");
-        }
-        finally {
+        } finally {
             try {
                 objectOutputStream.close();
             } catch (IOException | NullPointerException e) {
                 System.out.println("Error en el cerrado");
             }
         }
+
+    }
+
+    public void lecturaObjeto(String path) {
+        File file = new File(path);
+        ObjectInputStream objectInputStream = null;
+
+        try {
+            objectInputStream = new ObjectInputStream(new FileInputStream(file));
+            List<Usuario> lista = (List<Usuario>) objectInputStream.readObject();
+            lista.forEach(Usuario::mostrarDatos);
+        } catch (IOException e) {
+            System.out.println("Fichero no encontrado");
+            // nueva ruta lecturaObjeto(path)
+        } catch (ClassNotFoundException e) {
+            System.out.println("Clase no encontrada para la traduccion");
+        } catch (ClassCastException e){
+            System.out.println("Tipos incompatibles");
+        }
+
 
     }
 
