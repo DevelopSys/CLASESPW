@@ -13,7 +13,7 @@ Lecturas
     File -> (ponlo en modo lectura) FileReader - caracter a caracter -> BufferedReader (lectura "grande") - linea a linea
 
 Escritura
-    File -> (ponlo en modeo escritura) FileWriter - caracter a caracter -> BufferedWriter (puedo poner un salto de linea)
+    File -> (ponlo en modeo escritura) FileWriter - caracter a caracter -> PrintWriter / BufferedWriter (puedo poner un salto de linea)
 
 // realizar un programa que permita gestionar los usuario de una agenda.
     - Se pedira nombre, dni y correo.
@@ -22,6 +22,8 @@ Escritura
     - Nada mas arrancar el programa llenar el arraylist con todos los usuarios del fichero -> importacion desde txt a arraylis
 
 
-
-
-Objectos -> .bin -> Integer / Boolean / String / Usuario / Arraylist -> guarda datos java
+Objectos -> .bin -> Integer / Boolean / String / Arraylist / Usuario -> guarda datos java
+    Escritura
+        File -> FileOutputStream -> ObjectOutputStream -> writerObject
+    Lectura
+        File -> FileInputStream -> ObjectInputStream -> readObject

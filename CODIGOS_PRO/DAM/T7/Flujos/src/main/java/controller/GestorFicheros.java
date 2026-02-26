@@ -1,7 +1,11 @@
 package controller;
 
+import model.Usuario;
+
 import java.io.*;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -185,11 +189,10 @@ public class GestorFicheros {
                 int numero = Integer.parseInt(code) / fase;
                 System.out.print((char) numero);
             }
-        }catch (InputMismatchException e){
+        } catch (InputMismatchException e) {
             System.out.println("La fase es incorrecta, por favor empieza el proceso nuevamente");
             descifrarMenasje(path);
-        }
-        catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             System.out.println("Fichero no encontrado");
         } catch (IOException e) {
             System.out.println("No hay permisos de lectura");
@@ -202,6 +205,146 @@ public class GestorFicheros {
             }
         }
 
+    }
+
+    public void exportarUsuario(Usuario usuario) {
+        // cuando escribo la cabecera -> fichero no existe
+        // File
+        // PrintWriter
+        // nombre,apellio,dni
+        File file = new File("src/main/java/recursos/usuarios.csv");
+        PrintWriter printWriter = null;
+        System.out.println("Entrado en la exportacion");
+        try {
+            if (!file.exists()) {
+                file.createNewFile();
+                printWriter = new PrintWriter(new FileWriter(file, true));
+                printWriter.println("nombre,apellido,dni");
+                System.out.println("Entrado en la creacion");
+
+            }
+            // escribir los datos del usuario
+            printWriter = new PrintWriter(new FileWriter(file, true));
+            printWriter.println(usuario);
+            printWriter.close();
+
+        } catch (Exception e) {
+            System.out.println("Error en la escritura del fichero");
+        }
+
+
+    }
+
+    public List<Usuario> imporarUsuario(){
+        File file = new File("src/main/java/recursos/usuarios.csv");
+        List<Usuario> lista = new ArrayList<>();
+        BufferedReader reader = null;
+
+        try {
+            reader = new BufferedReader(new FileReader(file));
+            String linea = reader.readLine();
+            while ((linea = reader.readLine())!=null){
+                // nombre,apellido,dni
+                String[] elementos = linea.trim().replaceAll(" ","").split(",");
+                Usuario usuario = new Usuario(elementos[0],elementos[1],elementos[2]);
+                lista.add(usuario);
+            }
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Error en la ruta de lectura");
+        } catch (IOException e) {
+            System.out.println("Error en la lectura");
+        } finally {
+            try {
+                reader.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        return lista;
+    }
+
+    public void escribirObjetos(){
+        File file = new File("src/main/java/recursos/objetos.obj");
+        ObjectOutputStream objectOutputStream = null;
+
+        try {
+            objectOutputStream = new ObjectOutputStream(new FileOutputStream(file));
+            objectOutputStream.writeInt(56);
+
+        } catch (IOException e) {
+            System.out.println("Error en los permisos de escritura");
+        } finally {
+            try {
+                objectOutputStream.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+
+    }
+
+    public void leerObjeto(){
+        File file = new File("src/main/java/recursos/objetos.obj");
+        ObjectInputStream objectInputStream = null;
+
+        try {
+            objectInputStream = new ObjectInputStream(new FileInputStream(file));
+            int dato = objectInputStream.readInt();
+            System.out.println(dato);
+        } catch (IOException e) {
+            System.out.println("Error en la lectura");
+        }
+
+    }
+
+    public void escribirUsuario(List<Usuario> lista){
+        File file = new File("src/main/java/recursos/usuarios.obj");
+        ObjectOutputStream objectOutputStream = null;
+
+        try {
+            objectOutputStream = new ObjectOutputStream(new FileOutputStream(file));
+            objectOutputStream.writeObject(lista);
+        } catch (IOException e) {
+            System.out.println("Error en el proceso de escritura");
+        } finally {
+            try {
+                objectOutputStream.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    public List<Usuario> leerUsuario(){
+        File file = new File("src/main/java/recursos/usuarios.obj");
+        ObjectInputStream objectInputStream = null;
+        List<Usuario> lista = new ArrayList<>();
+
+        try {
+            objectInputStream = new ObjectInputStream(new FileInputStream(file));
+            // Usuario usuario = (Usuario) objectInputStream.readObject();
+            lista = (List<Usuario>) objectInputStream.readObject();
+            // System.out.println(usuario);
+
+        } catch (IOException e) {
+            System.out.println("Error en la lectura del fichero");
+        } catch (ClassNotFoundException e) {
+            System.out.println("Error en la lectura de la clase");
+        } catch (ClassCastException e){
+            System.out.println("Error en el casteo de la clase");
+        }
+
+        finally {
+            try {
+                objectInputStream.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return lista;
     }
 
 }

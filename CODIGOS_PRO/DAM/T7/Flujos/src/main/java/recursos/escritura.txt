@@ -1,2 +1,3 @@
+nombre,apellido,dni
 borja, 1234A, 1234
 marta, 2345A, 2345

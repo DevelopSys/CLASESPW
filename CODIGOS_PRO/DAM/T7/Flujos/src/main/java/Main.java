@@ -1,4 +1,5 @@
 import controller.GestorFicheros;
+import model.Usuario;
 
 public class Main {
 
@@ -11,6 +12,10 @@ public class Main {
         // gestor.escribirCaracteres("src/main/java/recursos/escritura.txt");
         //gestor.escribirLineas("src/main/java/recursos/escritura.txt");
         // gestor.codificarMensaje("src/main/java/recursos/codificado.txt");
-        gestor.descifrarMenasje("src/main/java/recursos/codificado.txt");
+        // gestor.descifrarMenasje("src/main/java/recursos/codificado.txt");
+        // gestor.escribirObjetos();
+        // gestor.leerObjeto();
+        // gestor.escribirUsuario(new Usuario("Borja","Martin","123123"));
+        gestor.leerUsuario();
     }
 }
