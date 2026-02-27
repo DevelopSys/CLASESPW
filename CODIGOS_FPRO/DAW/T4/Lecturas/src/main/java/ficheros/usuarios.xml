@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<agenda>
+    <usuario id="1" dni="123123A" edad="41">
+        <nombre>Borja1</nombre>
+        <apellido>Martin1</apellido>
+        <direccion>
+            <calle>Madrid1</calle>
+            <provincia>Madrid</provincia>
+            <localidad>Madrid</localidad>
+        </direccion>
+    </usuario>
+    <usuario id="2" dni="223123A" edad="42">
+        <nombre>Borja2</nombre>
+        <apellido>Martin2</apellido>
+        <direccion>
+            <calle>Madrid2</calle>
+            <provincia>Madrid</provincia>
+            <localidad>Madrid</localidad>
+        </direccion>
+    </usuario>
+    <usuario id="3" dni="323123A" edad="43">
+        <nombre>Borja3</nombre>
+        <apellido>Martin3</apellido>
+        <direccion>
+            <calle>Madrid3</calle>
+            <provincia>Madrid</provincia>
+            <localidad>Madrid</localidad>
+        </direccion>
+    </usuario>
+    <usuario id="4" dni="423123A" edad="44">
+        <nombre>Borja4</nombre>
+        <apellido>Martin4</apellido>
+        <direccion>
+            <calle>Madrid4</calle>
+            <provincia>Madrid</provincia>
+            <localidad>Madrid</localidad>
+        </direccion>
+    </usuario>
+    <usuario id="5" dni="523123A" edad="45">
+        <nombre>Borja5</nombre>
+        <apellido>Martin5</apellido>
+        <direccion>
+            <calle>Madrid5</calle>
+            <provincia>Madrid</provincia>
+            <localidad>Madrid</localidad>
+        </direccion>
+    </usuario>
+</agenda>
