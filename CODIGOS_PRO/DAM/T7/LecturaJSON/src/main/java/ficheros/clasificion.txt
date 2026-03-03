@@ -1,0 +1,5 @@
+1,Barcelona,64,21,4,1,133739
+2,Real Madrid,60,19,4,3,133738
+3,Atlético Madrid,51,15,5,6,133729
+4,Villarreal,51,16,7,3,133740
+5,Real Betis,43,11,5,10,133722
