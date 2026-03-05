@@ -1,0 +1,48 @@
+Consola
+	terminal -> 	input / output
+					input / output -> File (txt / obj)
+					input / output -> API (JSON / XML)
+					input / output -> GUI			
+					input / output -> Base de datos
+
+Librerias
+	
+	AWT -> xml / java Button
+	Swing -> xml / java JButton
+	JavaFX -> fxml / java Button -> Librerias
+
+
+JavaFX ->
+	Launcher -> lanza la app
+	HelloApplication -> Lanzador creando la primera ventana (Stage), poniendole una escena (formada por un fxml)
+	HelloController -> gestiona la parte logica de la vista definida en un fxml (hello-view.fxml)
+
+	module-info.java -> configuraciones y usos de cada uno de los modulos de la aplicacion desarrollada
+
+	resources
+		hello-view.fxml -> la parte grafica de una escena
+		cualquier recurso que necesite la app -> sonidos, imagenes, css, fuentes
+
+
+	1.Ventana -> Stage -> marco o frame de la pantalla
+		Normales
+		Dialogos -> "ventanas pequeñas" pero ademas los puedo configurar como modales
+
+	2.Escenas -> Scene -> contenido de una ventana
+
+	3.Elementos -> Node -> componentes 
+		Node contenedores
+			aquellos elementos que me permiten organizar la interfaz -> layout
+			vbox -> elementos organizados en vertical
+			hbox -> elementos organizados en horizontal
+			flowPane -> elementos en disponicion horizontal, repartiendo el espacion
+			borderPane -> elementos en disponicion de puntos cardinales (N,S,E,O,C)
+			gridPane -> elementos en disponicion de filas/columnas
+
+		Node finales
+			elementos que se renderizan
+			button, textfield, textArea, list, table, colum, spinner, combo/choice, radio, check
+
+	4. Eventos
+		Lo que pasa cuando un elemento sufre una accion
+

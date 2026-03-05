@@ -15,6 +15,4 @@
     <Label text="Primera app JavaFX"/>
     <Label fx:id="welcomeText"/>
     <Button text="Hello!" onAction="#onHelloButtonClick"/>
-    <Button text="Pulsar!"/>
-    <TextField text="Por favor introduce el nombre"/>
 </VBox>
