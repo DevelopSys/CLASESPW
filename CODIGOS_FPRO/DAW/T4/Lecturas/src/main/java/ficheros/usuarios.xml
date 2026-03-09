@@ -45,4 +45,49 @@
             <localidad>Madrid</localidad>
         </direccion>
     </usuario>
+    <usuario id="6" dni="523123A" edad="45">
+        <nombre>Borja6</nombre>
+        <apellido>Martin6</apellido>
+        <direccion>
+            <calle>Madrid6</calle>
+            <provincia>Madrid</provincia>
+            <localidad>Madrid</localidad>
+        </direccion>
+    </usuario>
+    <usuario id="7" dni="523123A" edad="45">
+        <nombre>Borja7</nombre>
+        <apellido>Martin7</apellido>
+        <direccion>
+            <calle>Madrid7</calle>
+            <provincia>Madrid</provincia>
+            <localidad>Madrid</localidad>
+        </direccion>
+    </usuario>
+    <usuario id="8" dni="523123A" edad="45">
+        <nombre>Borja8</nombre>
+        <apellido>Martin8</apellido>
+        <direccion>
+            <calle>Madrid8</calle>
+            <provincia>Madrid</provincia>
+            <localidad>Madrid</localidad>
+        </direccion>
+    </usuario>
+    <usuario id="9" dni="523123A" edad="45">
+        <nombre>Borja9</nombre>
+        <apellido>Martin9</apellido>
+        <direccion>
+            <calle>Madrid9</calle>
+            <provincia>Madrid</provincia>
+            <localidad>Madrid</localidad>
+        </direccion>
+    </usuario>
+    <usuario id="10" dni="876" edad="51">
+        <nombre>Maria</nombre>
+        <apellido>Martin</apellido>
+        <direccion>
+            <calle>Barcelona</calle>
+            <provincia>Barcelona</provincia>
+            <localidad>Barcelona</localidad>
+        </direccion>
+    </usuario>
 </agenda>

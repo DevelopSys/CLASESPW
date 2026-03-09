@@ -33,8 +33,8 @@
             <nombre>P1Libro3</nombre>
         </personaje>
     </libroo>
-    <libros anio="1994" isbn="123123" nPAginas="100">
-        <titulo>Libro1</titulo>
+    <libroo anio="1994" isbn="123123" nPAginas="100">
+        <titulo>Libro4</titulo>
         <escritor>Escritor1</escritor>
         <categoria>Ciencia Ficcion</categoria>
         <personaje tipo="Principal" muerto="false">
@@ -46,9 +46,9 @@
         <personaje tipo="Secundario" muerto="false">
             <nombre>P3Libro1</nombre>
         </personaje>
-    </libros>
-    <libros anio="2000" isbn="234234" nPAginas="200">
-        <titulo>Libro2</titulo>
+    </libroo>
+    <libroo anio="2000" isbn="234234" nPAginas="200">
+        <titulo>Libro5</titulo>
         <escritor>Escritor2</escritor>
         <categoria>Narrativa</categoria>
         <personaje tipo="Principal" muerto="false">
@@ -57,13 +57,13 @@
         <personaje tipo="Principal" muerto="false">
             <nombre>P2Libro2</nombre>
         </personaje>
-    </libros>
-    <libros anio="2020" isbn="334534" nPAginas="300">
-        <titulo>Libro3</titulo>
+    </libroo>
+    <libroo anio="2020" isbn="334534" nPAginas="300">
+        <titulo>Libro6</titulo>
         <escritor>Escritor3</escritor>
         <categoria>Humor</categoria>
         <personaje tipo="Principal" muerto="true">
             <nombre>P1Libro3</nombre>
         </personaje>
-    </libros>
+    </libroo>
 </libreria>

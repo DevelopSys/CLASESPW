@@ -34,4 +34,13 @@ public class Usuario {
         this.dni = dni;
         this.edad = edad;
     }
+
+    public void mostrarDatos(){
+        System.out.println("id = " + id);
+        System.out.println("nombre = " + nombre);
+        System.out.println("apellido = " + apellido);
+        System.out.println("direccion = " + direccion.getLocalidad());
+        System.out.println("dni = " + dni);
+        System.out.println("edad = " + edad);
+    }
 }

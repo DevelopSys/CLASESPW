@@ -16,6 +16,7 @@ public class Libreria {
     @XmlElement(name = "libroo")
     private List<Libro> bookss;
     public Libreria() {
+        // XLST
         bookss = new ArrayList<>();
     }
 
