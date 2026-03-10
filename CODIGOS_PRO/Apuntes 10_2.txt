@@ -1,0 +1,34 @@
+Consola -> 	in/out Console
+			in/out File (txt/dat)
+			in/out http (json/xml)
+			in/out GUI (ventanas/button/textfield/spinner)
+			in/out DB (SQL)
+
+GUI -> 	WEB -> html + js/ts (React/Angular/Vue - SPA)
+		Desktop -> 	C# (.net) -> form
+					py -> tkinder
+					Java -> AWT, swing, javafx (java 11< >openjavafx)
+
+
+Ventanas -> Stage
+PanelGeneral -> Scene
+Elementos -> Node
+	Node final -> Button/ Spinner / ComboBox / ChoiceBox / RadioButton / Textfield / Text / List / Table
+	Node container -> estructuran internamente otros elementos. Como se disponen los elementos finales -> layouts
+		HBox -> los elementos se disponen horizontalmente
+		VBox -> los elementos se disponen verticalmente
+		BorderPane -> los elementos se disponen mediante puntos cardinales (izq, der, arr, abj, centro)
+		GridPane -> los elementos se disponen en "tabla"
+		FlowPane -> los elementos se disponen desde el centro repartiendo el espacio
+
+
+	Stage
+		Scene
+			Nodes
+
+
+src
+	java 
+		org.nombre.nombreapp -> codigos de java 
+		module-info.java -> todas las necesidades de cada uno de los modulos de la app
+
