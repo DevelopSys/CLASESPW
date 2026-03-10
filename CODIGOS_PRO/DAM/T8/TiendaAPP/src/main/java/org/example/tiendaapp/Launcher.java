@@ -1,4 +1,4 @@
-package org.example.inicio;
+package org.example.tiendaapp;
 
 import javafx.application.Application;
 
