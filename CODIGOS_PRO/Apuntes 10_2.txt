@@ -30,5 +30,13 @@ Elementos -> Node
 src
 	java 
 		org.nombre.nombreapp -> codigos de java 
+			HelloApp + Launcher -> la clase donde se lanza la app lauch / start
+			HelloController -> Toda la parte logica de la escena
+				+ listener a los nodos
+
 		module-info.java -> todas las necesidades de cada uno de los modulos de la app
+
+	resources
+		org.nombre.nombreapp -> recursos estaticos de la app -> imagenes, font, audio, video, parte grafica de la escena
+			hello-view.fxml -> grafico de la escena
 
