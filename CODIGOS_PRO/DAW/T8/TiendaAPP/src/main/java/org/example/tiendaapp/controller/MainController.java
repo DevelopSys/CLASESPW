@@ -1,7 +1,5 @@
-package org.example.tiendaapp;
+package org.example.tiendaapp.controller;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
