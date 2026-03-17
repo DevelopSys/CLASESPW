@@ -1,4 +1,4 @@
-package org.example.tiendaapp;
+package org.example.tiendaapp.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

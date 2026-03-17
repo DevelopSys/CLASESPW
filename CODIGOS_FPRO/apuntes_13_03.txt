@@ -1,0 +1,46 @@
+Recursividad -> llamar a un metodo desde si mismo
+
+	- Provocar: bucle -> infito
+				llamadas innecesarias -> while / for / dowhile   if / switch
+						lectura de los caracteres de un fichero while((i=fr.read()) != -1 ){}
+						lectura de las lineas de un fichero while()
+
+	- Ofrece:	codigo limpio
+				funcion complejo
+
+
+				lectura de subdirectorios
+					for(){
+						if is directory
+							for()
+								if is directory
+									for()
+										if is directory
+											for()
+												if is directory
+													for()
+					}
+
+Cosas a tener en cuenta:
+	
+	- no lo hagas sobre cosas muy simple
+	- 1 o n casos BASE -> tener una salida a la ejecicion -> PARAR -> tener parametro
+		- llamadas al metodo (parametro)
+
+
+		Metodo(7) -> 8743
+		Metodo(6) -> 789
+		Metodo(5) -> 56
+		Metodo(4) -> 20
+		Metodo(3) -> 8
+		Metodo(2) -> 5
+		Metodo(1) -> 1 BASE
+		Metodo(0) -> 0 BASE
+
+
+
+
+
+
+
+		Base 1
