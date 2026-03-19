@@ -1,0 +1,37 @@
+JavaFX -> grafica
+	Stage -> ventana
+	Scene -> escena
+	Node -> elementos de las escenas
+
+Grafica -> .fxml SceneBuilder -> nodo root fx:controller= la clase que gestiona la logica
+			en cada uno de los nodos fx:id = nombre
+
+	+
+
+Logica -> .java
+			crear cada variable del tipo XXXX con el mismo id declarado en la parte logica acompañado de @FXML
+
+			escuchar las acciones de cada elemento que tu quieras
+				Te doy un escuchador directo sobre una accion
+				elemento.setOnAction(event -> {lo mismo})
+				elemente.setOnAction(event -> {lo mismo})
+
+				Te doy un escuchador indirecto sobre una accion
+				elemente1.setOnAction(new ClaseAnidada)
+				elemente2.setOnAction(new ClaseAnidada)
+				elemente3.setOnAction(new ClaseAnidada)
+
+				Escucho un cambio en alguna propiedad
+
+
+			clase anidada implement EventHandler<ActionEvent>{
+				@Override
+				handle(ActionEvent evet){
+					
+					acciones comunes
+
+					if (event.getSource() == elemento1){
+
+					}
+				}
+			}
