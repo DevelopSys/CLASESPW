@@ -11,7 +11,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         // carga la parte grafica en el FXMLoader
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("form-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login-view.fxml"));
         // crea la escena y le asocia la parte grafica
         Scene scene = new Scene(fxmlLoader.load());
         // pone la escena en la ventana
