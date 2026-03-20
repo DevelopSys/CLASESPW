@@ -1,0 +1,34 @@
+Fechas
+	12 abril entrega proyectos FUND , PRO
+	3 mayo -> intermodular
+
+App reservas, gestion escular, todos, restaurante, hoteles
+
+menus por consola , GUI (JavaFX)
+
+FUND
+	Funcionamiento
+	Bases del proyecto
+
+		Clases -> Herencia justificada, interfaces definidas
+		ModelViewControl
+		Encapsulamiento -> final, private, abstract
+		POO
+		Documentacion -> javadoc
+
+
+PROG
+	Funcionamiento
+	JDBC -> Model / DAO
+		Create Read Update Delete -> 	como poder avanzar sin tener ni idea de JDBC
+										1. Crear una tarea -> 	metodo todos los datos -> fichero o a un ArrayList
+																controller.addTarea(tarea) -> lista.add(tarea)
+
+																dao.insertarTarea(tarea) -> INSERT INTO tareas () VALUES (?,?,?,?,?)
+
+	Excepciones -> 	Disponibilidad del codigo (IOException)
+					SQLException
+
+
+
+

@@ -30,10 +30,10 @@ public class MainGrupos {
         fp.anadirSubgrupo(dam);
 
         ControllerGrupos controllerGrupos = new ControllerGrupos();
-        if (controllerGrupos.perteneceA(fp, usuario1)){
-
+        if (controllerGrupos.perteneceA(daw, usuario7)){
+            System.out.println("Si pertenece");
         } else {
-
+            System.out.println("No pertenece");
         }
     }
 }
