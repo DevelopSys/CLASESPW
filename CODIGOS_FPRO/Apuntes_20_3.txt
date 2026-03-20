@@ -29,6 +29,15 @@ PROG
 	Excepciones -> 	Disponibilidad del codigo (IOException)
 					SQLException
 
+TODO APP
+
+	Tareas
+		TareasOcio
+			Clasificable
+		TareasTrabajo
+		TareasFamilia
+			Clasificable
+
 
 
 
