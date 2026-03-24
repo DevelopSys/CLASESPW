@@ -15,6 +15,8 @@ public class Usuario {
     private int edad;
     private String perfil, genero;
 
-
-
+    @Override
+    public String toString() {
+        return nombre +" "+apellido;
+    }
 }
