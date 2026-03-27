@@ -6,20 +6,28 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 
 import javafx.scene.control.TextField;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+import org.example.tiendaapp.HelloApplication;
+import org.example.tiendaapp.data.DataSet;
 import org.example.tiendaapp.model.User;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class FormController implements Initializable {
 
+    @FXML
+    private Button btnCerrar;
     @FXML
     private Button btnAgregar;
 
@@ -84,7 +92,7 @@ public class FormController implements Initializable {
     }
 
     private void initGUI() {
-        listViewUsuarios.setItems(listaUsers);
+        listViewUsuarios.setItems(DataSet.getListUsers());
         spinnerEdad.setValueFactory(modelEdad);
         grupoGenero.getToggles().addAll(radioMasc, radioFem);
         comboTipo.setItems(perfiles);
@@ -132,7 +140,7 @@ public class FormController implements Initializable {
                 int edad = (int) spinnerEdad.getValue();
                 String genero = ((RadioButton) (grupoGenero.getSelectedToggle())).getText();
                 User user = new User(nombre, apellido, correo, pass, dni, genero, perfil, edad);
-                listaUsers.add(user);
+                DataSet.addUser(user);
                 //TODO usuario a una lista
                 Alert dialogPane = new Alert(Alert.AlertType.INFORMATION);
                 dialogPane.setHeaderText("Añadido correcto");
@@ -176,6 +184,25 @@ public class FormController implements Initializable {
                 listViewUsuarios.getSelectionModel().select(-1);
             }
         });
+        btnCerrar.setOnAction(event -> {
+            // 1. Creo stage
+            Stage stage = new Stage();
+            // 2. Creo scene
+            try {
+                FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("login-view.fxml"));
+                Scene scene = new Scene(loader.load());
+                // 3. Asocio stage a scene
+                stage.setScene(scene);
+                stage.setTitle("Tienda ThePower");
+                stage.show();
+                // 4. Cierro stage actual
+                ((Stage)btnCerrar.getScene().getWindow()).close();
+            } catch (IOException e){
+                System.out.println("No se encuentra la ruta");
+            }
+
+        });
+
         // indirecta
         btnCompobar.setOnMouseEntered(new ManejoRaton());
         btnVaciar.setOnMouseEntered(new ManejoRaton());
@@ -185,6 +212,7 @@ public class FormController implements Initializable {
         btnVaciar.setOnMouseExited(new ManejoRaton());
         btnCompobar.setOnMouseExited(new ManejoRaton());
         btnEliminar.setOnMouseExited(new ManejoRaton());
+
         // propiedades
         checkLista.selectedProperty().addListener(
                 (observable, oldValue, newValue) -> {
