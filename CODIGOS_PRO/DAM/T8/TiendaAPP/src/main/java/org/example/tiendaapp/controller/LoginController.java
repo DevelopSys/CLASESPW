@@ -14,6 +14,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.example.tiendaapp.HelloApplication;
+import org.example.tiendaapp.data.DataSet;
+import org.example.tiendaapp.model.Usuario;
 
 public class LoginController implements Initializable {
 
@@ -36,6 +38,7 @@ public class LoginController implements Initializable {
     }
 
     private void actions() {
+
         btnRegistro.setOnAction(event -> {
             // 1. Crear una ventana
             Stage stage = new Stage();
@@ -63,18 +66,30 @@ public class LoginController implements Initializable {
         });
         btnLogin.setOnAction(event -> {
             // consulto sobre una lista (o sobre base de datos)
-            if(editCorreo.getText().equals("admin@admin.com") && editPass.getText().equals("admin")){
+            Usuario usuarioLogin = DataSet.getLogin(editCorreo.getText(), editPass.getText());
+            if(usuarioLogin!=null){
+                // que perfil tiene?
                 // 1. Crear una ventana
                 Stage stage = new Stage();
+                /*
+                switch (usuarioLogin.getPerfil().toLowerCase()){
+                    case "administrador":
+                        // FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("admin-view.fxml"));
+                        break;
+                    case "cliente":
+                        // FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("cliente-view.fxml"));
+                        break;
+                }*/
+
                 // 2. Creo una escena
                 try {
 
-                    FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("main-view.fxml"));
+                    FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("client-view.fxml"));
                     Scene scene = new Scene(loader.load());
 
                     // 3. Asocio ventana con escena
                     stage.setScene(scene);
-                    stage.setTitle("Registro usuarios");
+                    stage.setTitle("Tienda productos");
                     stage.show();
 
                     // 4. Cerrar la pantalla de login

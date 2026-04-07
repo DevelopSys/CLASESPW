@@ -15,6 +15,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import org.example.tiendaapp.HelloApplication;
+import org.example.tiendaapp.data.DataSet;
 import org.example.tiendaapp.model.Usuario;
 
 import java.io.IOException;
@@ -140,7 +141,8 @@ public class FormController implements Initializable {
                 String genero = ((RadioButton) (grupoGenero.getSelectedToggle())).getText(); // null.getText() -> NullPointerExc
                 int edad = spinnerEdad.getValue();
                 Usuario usuario = new Usuario(nombre, apellido, direccion, correo, pass, edad, perfil, genero);
-                listaUsuarios.add(usuario);
+                DataSet.addUser(usuario);
+                // listaUsuarios.add(usuario);
                 dialogo = new Alert(Alert.AlertType.CONFIRMATION);
                 dialogo.setTitle("Exito!");
                 dialogo.setContentText("Usuario agregado con exito. Quieres vaciar los campos existentes");
@@ -220,9 +222,7 @@ public class FormController implements Initializable {
         listaPerfiles = FXCollections.observableArrayList("Administrador", "Cliente", "Trabajador");
         // arraylist -> añado un usuario , refrescar la lista
         // observablelist -> añado un usuario (se efectua una señal a todo elemento con relacion)
-        listaUsuarios = FXCollections.observableArrayList(
-                new Usuario("Borja", "Martin", "borja@gmail.com", "pass", "asd", 12, "123", "asd")
-        );
+        listaUsuarios = DataSet.getListaUsuarios();
         modeloSpinner = new SpinnerValueFactory.IntegerSpinnerValueFactory(18, 90, 18, 1);
     }
 
