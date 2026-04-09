@@ -1,0 +1,39 @@
+Base de datos
+	
+	NO-SQL 	-> mongo -> colecciones -> documentos -> JSON -> no hay relaciones directas 
+	SQL -> mysql/mariadb - postgresql - sqlite - oracle	- tablas - registros (PK) -> relaciones (FK)
+
+
+Java   ---------------------------------> Servidor de base de datos (XAMP -> MariaDB / SQL Server / Postrgres)
+	ORM--------------------------------->
+	   --------SRVWeb+ORM--------------->
+				  APIREST
+
+
+	1 - forma directa: JDBC -> Driver, ejecuta sentencias SQL sobre una conexion a base de datos
+		ejecucion "plana" de querys
+		Connection -> representa la conexion a la base de datos -> url: jdbc:mysql://localhost/miDB
+		Statement -> permite ejecutar sentencias QUERY "plana" SELECT * FROM Usuarios WHERE nombre = '"+variable+"' 
+		"select * from usuarios where nombre = '%s' and localizacion = '%s' and salario < %d"- El trabajo lo hace el motor de base de datos -> Se puede producir un SQL Injection
+		PrepareStatement -> permite ejecutar sentencias QUERY parametrizadas - El trabajo lo hace el cliente -> previene SQL Injection
+		HASTA AQUI PARA HACER INSERT UPDATE DELETE -> bool / int
+		ResultSet -> permite obterner los registros de una sentencia SELECT
+
+	2 - ORM -> no se ejecutan querys -> Hibernate -> pasa el objeto a query -> session.save(new Usuario())
+	3 - 3 capas -> SpringBoot
+				   controller  
+
+
+model
+	cliente.java -> estructura del objeto y sus acciones
+
+controller
+	tiendacontroller.java -> logica de negocio
+	insertClient() -> la logica de la insercion. cuando creo un cliente le mando un correo de confirmacion para el 2FA
+	borrarClient() -> la logica del borrado. cuando un cliente se borra lo que se hace es eliminar todos sus documentos.
+
+dao -> una clase dao por modelo
+	clientedao.java -> logica contra la base de datos -> INSERT DELETE UPDATE SELECT
+	insertClient() -> ejecucion de la query
+	borrarClient() -> ejecuta la quiery
+

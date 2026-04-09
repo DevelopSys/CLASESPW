@@ -43,6 +43,7 @@
             <Button fx:id="btnCompra" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Comprar" />
             <Button fx:id="btnDetalle" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Ver detalle" GridPane.columnIndex="1" />
             <Button fx:id="btnCerrar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Cerrar sesion" GridPane.columnIndex="2" />
+            <Button fx:id="btnResumen" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Cerrar sesion" GridPane.columnIndex="3" />
          </children>
       </GridPane>
    </bottom>
