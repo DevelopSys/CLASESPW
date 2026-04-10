@@ -1,0 +1,24 @@
+Crear un modelo llamado Cuenta Corriente con:
+    id
+    saldo
+Una cuenta corriente puede
+    sacar dinero -> cuento quiero sacar
+        error si intento sacar mas dinero del que tiengo
+        error si intento sacar dinero en negativo
+    ingresar dinero -> cuanto quiero ingresar
+        error si intento meter dinero negativo
+
+Crear un controlador Banco con_
+
+ArrayList<CuentasBancarias>
+
+un metodo de agregarCuenta()
+un metodo de sacarDinero(id, dinero)
+    fallo si el id de la cuenta no esta en la lista
+    fallo si el dinero que sacas es mas grande que el saldo
+    fallo si el dinero que sacas es negativo
+un metodo de ingresarDinero(id, dinero)
+    fallo si el dinero que sacas es negativo
+    fallo si el id de la cuenta no esta en la lista
+
+ PERSONALIZAR EXCEPCIONES
