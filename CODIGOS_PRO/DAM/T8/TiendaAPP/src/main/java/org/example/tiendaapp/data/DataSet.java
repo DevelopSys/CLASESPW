@@ -12,7 +12,7 @@ public class DataSet {
 
     private static ObservableList<Usuario> listaUsuarios
             = FXCollections.observableArrayList(
-            new Usuario("Admin", "Admin", "Madrid", "admin@gmail.com", "admin", 42, "Administrador", "Masculino"),
+            new Usuario("Admin", "Admin", "Madrid", "admin", "admin", 42, "Administrador", "Masculino"),
             new Usuario("User", "User", "Madrid", "user@gmail.com", "user", 40, "Cliente", "Femenino"));
 
     private static ObservableList<Producto> carrito = FXCollections.observableArrayList();

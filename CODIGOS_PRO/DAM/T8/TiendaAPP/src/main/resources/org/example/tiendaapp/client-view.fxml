@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -37,8 +38,11 @@
             <Button fx:id="btnComprar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Comprar" GridPane.columnIndex="3" />
             <Button fx:id="btnCarrito" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Info carrito" />
             <Button fx:id="btnCarritoVentana" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Ver carrito" GridPane.columnIndex="2" />
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Info producto" GridPane.columnIndex="1" />
+            <Button fx:id="btnInfo" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Info producto" GridPane.columnIndex="1" />
          </children>
       </GridPane>
    </bottom>
+   <top>
+      <TextField fx:id="editFiltro" promptText="introduce el nombre a filtrar" BorderPane.alignment="CENTER" />
+   </top>
 </BorderPane>

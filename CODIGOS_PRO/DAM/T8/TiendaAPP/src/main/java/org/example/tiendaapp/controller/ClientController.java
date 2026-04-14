@@ -1,18 +1,27 @@
 package org.example.tiendaapp.controller;
 
 import com.google.gson.Gson;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
+import javafx.stage.Stage;
+import org.example.tiendaapp.HelloApplication;
 import org.example.tiendaapp.data.DataSet;
 import org.example.tiendaapp.model.Producto;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.json.JSONWriter;
-
+import java.io.IOException;
 import java.net.URI;
 import java.net.URL;
 import java.net.http.HttpClient;
@@ -20,12 +29,13 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.function.Predicate;
 
 public class ClientController implements Initializable {
 
 
     @FXML
-    private Button btnComprar, btnCarrito, btnCarritoVentana;
+    private Button btnComprar, btnCarrito, btnCarritoVentana, btnInfo;
     @FXML
     private TableColumn<Producto, Number> colId;
 
@@ -41,7 +51,12 @@ public class ClientController implements Initializable {
     @FXML
     private TableView<Producto> tablaProductos;
 
+    @FXML
+    private TextField editFiltro;
+
     private ObservableList<Producto> listaProductos;
+
+    private FilteredList<Producto> listaFiltada;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -54,14 +69,20 @@ public class ClientController implements Initializable {
     }
 
     private void acciones() {
+        editFiltro.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                listaFiltada.setPredicate(producto -> producto.getTitle().contains(newValue));
+            }
+        });
         btnCarrito.setOnAction(event -> {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Carrito");
-            alert.setContentText("Vas a comprar un total de "+DataSet.getCarrito().size()
-                    +" productos, con un total en euros de "+DataSet.getCosteCarrito()+"\nQueeres terminar la compra?");
+            alert.setContentText("Vas a comprar un total de " + DataSet.getCarrito().size()
+                    + " productos, con un total en euros de " + DataSet.getCosteCarrito() + "\nQueeres terminar la compra?");
             alert.getButtonTypes().setAll(ButtonType.OK, ButtonType.NO);
             Optional<ButtonType> respuesta = alert.showAndWait();
-            if(respuesta.get() == ButtonType.OK){
+            if (respuesta.get() == ButtonType.OK) {
                 Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
                 alert1.setTitle("Compra exitpsa");
                 alert1.setContentText("Comprarealizada con existo");
@@ -71,11 +92,11 @@ public class ClientController implements Initializable {
         btnComprar.setOnAction(event -> {
             // que producto esta seleccionado de la tabla
             Producto producto = tablaProductos.getSelectionModel().getSelectedItem();
-            if (producto!=null){
+            if (producto != null) {
                 DataSet.addProduct(producto);
-                producto.setStock(producto.getStock()-1);
+                producto.setStock(producto.getStock() - 1);
                 // tablaProductos.refresh();
-                if (producto.getStock() == 0){
+                if (producto.getStock() == 0) {
                     listaProductos.remove(producto);
                 }
                 tablaProductos.getSelectionModel().select(null);
@@ -91,17 +112,38 @@ public class ClientController implements Initializable {
             // FXMLoader cargar un fxml nuevo
             // Los datos del ListView son los que estan en el carrito del DataSet
         });
-
-        /*
-         Al darle al boton infoProduto
+        btnInfo.setOnAction(event -> {
+            /*
             1. Cargo un FXMLoader nuevo
             2. La informacion a mostrar se le tiene que comunicar a la nueva escena (la linea seleccionada)
             // La comunicacion entre dos escenas se realiza mediante CONTROLADORAS
+            */
+            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("detail-view.fxml"));
+            try {
+                Producto producto = tablaProductos.getSelectionModel().getSelectedItem();
+                // comprobar que no es nulo
+                    // si lo es, sacar una alerta
+                Parent root = loader.load();
+                DetailController detailController = loader.getController();
+                // DetailController detailController = new DetailController;
+                detailController.setProducto(producto);
+                Scene scene = new Scene(root);
+                Stage stage = new Stage();
+                stage.setScene(scene);
+                stage.show();
+            } catch (IOException e){
+                System.out.println("Error en la carga");
+            }
+        });
+
+        /*
+         Al darle al boton infoProduto
+
          */
     }
 
     private void initGUI() {
-        tablaProductos.setItems(listaProductos);
+        tablaProductos.setItems(listaFiltada);
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colNombre.setCellValueFactory(new PropertyValueFactory<>("title"));
         colPrecio.setCellValueFactory(new PropertyValueFactory<>("price"));
@@ -111,6 +153,7 @@ public class ClientController implements Initializable {
 
     private void instancias() {
         listaProductos = FXCollections.observableArrayList();
+        listaFiltada = new FilteredList(listaProductos);
     }
 
     private void cargaProductosJSON() {
