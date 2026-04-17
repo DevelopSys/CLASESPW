@@ -13,6 +13,7 @@ Crear un controlador Banco con_
 ArrayList<CuentasBancarias>
 
 un metodo de agregarCuenta()
+    fallo con id duplicado
 un metodo de sacarDinero(id, dinero)
     fallo si el id de la cuenta no esta en la lista
     fallo si el dinero que sacas es mas grande que el saldo

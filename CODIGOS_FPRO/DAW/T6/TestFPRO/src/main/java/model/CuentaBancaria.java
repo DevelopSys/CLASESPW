@@ -1,5 +1,7 @@
 package model;
 
+import exceptions.SaldoException;
+
 public class CuentaBancaria {
 
     private int saldo;
@@ -16,11 +18,9 @@ public class CuentaBancaria {
         this.saldo += saldo;
     }
 
-    public void sacarDinero(int saldo){
-        if(saldo<=0){
-            throw new IllegalArgumentException("no se puede sacar en negativo");
-        } else if(saldo>this.saldo){
-            throw new IllegalArgumentException("no cuentas con saldo suficiente");
+    public void sacarDinero(int saldo) throws SaldoException{
+        if(saldo>getSaldo()){
+            throw new SaldoException("No hay saldo suficiente");
         }
         this.saldo -= saldo;
     }
