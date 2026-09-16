@@ -1,0 +1,42 @@
+Programación
+
+	Front -> 	lo que ve. Pag. web, app movil, App escritorio
+				lenguajes: 	kotlin, java, objective c, swift, c#, dart, typescript, python, html - javascript
+	Back -> 	la que no se ve (procesamiento): lógica de funcionamiento
+				lenguajes: java (springboot), javascript (nodejs - express), C#, python (django, flask, fast api), php 
+
+	Cual es el mejor lenguaje? El que mejor se acople a tu solucion
+
+Bajo nivel -> codigo maquina -> 0 1 Binario Octal Hexadecimal -> codigo ensablador
+Alto nivel -> mas parecido al lenguaje natural
+	Interpretados -> python
+	Compilados -> java, C#
+
+IDE -> programa que me ayuda a programar. IntelliJ/ Visual Studio/ Visual Studio Code / Eclipse / Netbeans / PyCharm/ Anaconda
+
+Instalaciones necesarias JAVA
+
+JAVA -> JRE -> JVM - maquina virtual de java (sw que emula hw)
+	C:/programsfile(x64)/java/javavirtualmachines
+	/bin/java/
+	AppData/java/jvm
+
+JDK -> Conjunto de elementos base para la programacion en java
+	1.8 - 18 - 26 (Open JDK) -> .zip -> lo ubico en C:/programsfile(x64)/java/javavirtualmachines
+
+IDE -> Intellij Community
+
+VCS -> GitHub
+
+1- perfil de github
+2- git -> comandos 
+3- github desktop
+
+
+LOCAL-PORTAIL								REPOSITORIO RED								LOCAL-SOBREMESA
+
+proyecto1									proyecto1									proyecto1
+a1 											a1 											a1
+b 											b 											b
+
+
