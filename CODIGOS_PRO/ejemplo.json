@@ -1,9 +1,0 @@
-[
-  {"nombre":"Borja", "apellido":"Martin"},
-  {"nombre":"Borja", "apellido":"Martin"},
-  {"nombre":"Borja", "apellido":"Martin"},
-  {"nombre":"Borja", "apellido":"Martin"},
-  {"nombre":"Borja", "apellido":"Martin"}
-]
-objecto.data[0].nombre
-
