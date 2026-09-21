@@ -1,0 +1,38 @@
+Problemas GitHub
+
+1. Creo el repositorio en web github
+2. Desde github desktop clono -> ME QUEDO CON LA RUTA DONDE SE HA CLONADO
+	/user/borja/documents/Github/RepoClonado ->  /user/borja/documents/Github/clase_pro/repo_clonado
+3. Crear el proyecto de IntelliJ en la ruta del repositorio
+4. En intellij abro el proyecto de una ruta que no es
+5. Al crear el proyecto no le deis a create git repository
+
+JDK -> java development kit: conjunto de clases / interfaces / enum / librerias base que me permiten programar
+
+estructura del proyecto
+
+NombreProyecto
+	src -> todos los codigos de programacion: clases / enums / interfaces / records / exceptiones
+ExternalLibraries
+	Todas las librerias del proyecto -> JDK
+
+
+fuera de las clases no puedes crear nada
+
+Clases -> estructura basica de programacion -> donde escribimos el codigo
+	variables: cualifica un dato. Guarda un valor
+	metodos: ejecuciones. Funcionalidades
+		variables
+		no puedes tener un metodo, solo puedes llamarlo
+
+	A la hora de crear una clase: 
+
+		- Son nombre representativos. 
+		- Son nombres en singular
+		- La 1a en mayusculas. PersonaImportante 
+		- El nombre del fichero, tiene que coincidir con el nombre de la clase publica del fichero
+
+
+Metodos -> funcionalidades. Lo que se puede ejecutar
+
+

@@ -7,7 +7,7 @@ Programación
 
 	Cual es el mejor lenguaje? El que mejor se acople a tu solucion
 
-Bajo nivel -> codigo maquina -> 0 1 Binario Octal Hexadecimal -> codigo ensablador
+Bajo nivel -> codigo maquina -> 0 1 Binario Octal Hexadecimal -> codigo ensamblador
 Alto nivel -> mas parecido al lenguaje natural
 	Interpretados -> python
 	Compilados -> java, C#
@@ -22,13 +22,14 @@ JAVA -> JRE -> JVM - maquina virtual de java (sw que emula hw)
 	AppData/java/jvm
 
 JDK -> Conjunto de elementos base para la programacion en java
-	1.8 - 18 - 26 (Open JDK) -> .zip -> lo ubico en C:/programsfile(x64)/java/javavirtualmachines
+	1.8 - 18 - 28 (Open JDK) -> .zip -> lo ubico en C:/programsfile(x64)/java/javavirtualmachines
+													~/Library/Java/JavaVirtualMachines/corretto-23.0.2-1
 
 IDE -> Intellij Community
 
 VCS -> GitHub
 
-1- perfil de github
+1- perfil de github / repositorio
 2- git -> comandos 
 3- github desktop
 
@@ -36,7 +37,7 @@ VCS -> GitHub
 LOCAL-PORTAIL								REPOSITORIO RED								LOCAL-SOBREMESA
 
 proyecto1									proyecto1									proyecto1
-a1 											a1 											a1
-b 											b 											b
+readme.md 									readme.md 												
+prueba.rd 									prueba.md									
 
 
