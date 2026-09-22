@@ -1,6 +1,6 @@
 Problemas GitHub
 
-1. Creo el repositorio en web github
+1. Creo el repositorio en web github (con el readme - para que se cree una rama)
 2. Desde github desktop clono -> ME QUEDO CON LA RUTA DONDE SE HA CLONADO
 	/user/borja/documents/Github/RepoClonado ->  /user/borja/documents/Github/clase_pro/repo_clonado
 3. Crear el proyecto de IntelliJ en la ruta del repositorio
@@ -20,6 +20,23 @@ ExternalLibraries
 fuera de las clases no puedes crear nada
 
 Clases -> estructura basica de programacion -> donde escribimos el codigo
+	
+	clase{
+		variables
+		metodos(){
+			variables
+			llamadas de ejecicion
+			metodo(){} -> NO
+		}
+
+		llamada de ejecicion -> NO
+	}
+
+	metodo() -> no
+	varible -> no
+
+
+	POO: una clase es el molde de un futuro objeto
 	variables: cualifica un dato. Guarda un valor
 	metodos: ejecuciones. Funcionalidades
 		variables

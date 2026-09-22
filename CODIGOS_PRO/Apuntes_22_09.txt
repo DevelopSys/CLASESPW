@@ -1,0 +1,17 @@
+Clase
+	puede tener metodos, variables. Podemos tener n clase
+
+Siempre minimo 1 clase donde existe metodo especial main
+	main entrada al sistema
+
+Entrada.java (codigo) -> compila -> Entrada.class -> JVM
+javac ruta -> Entrada.class
+java ruta -> ejecuta
+
+Variables:
+	nombre son representativos
+	no pueden tener caracteres especiales
+	la primera en minusculas, siguientes palabras la primera en mayusculas
+
+
+

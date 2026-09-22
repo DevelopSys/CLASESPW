@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64f51a29-8f7f-4301-8736-d527611ee6bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Entrada.java" afterDir="false" />
+    <list default="true" id="64f51a29-8f7f-4301-8736-d527611ee6bf" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/../../../Apuntes_21_09.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Apuntes_21_09.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Componentes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Componentes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ejemplo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entrada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entrada.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entrada.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DAW/T1/Componentes" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DAW/T1/Componentes" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +55,7 @@
     "Application.Entrada.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
@@ -62,7 +64,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.15076561",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
@@ -74,6 +76,27 @@
       <option name="presentableId" value="Default" />
       <updated>1789999658771</updated>
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <option name="closed" value="true" />
+      <created>1790002621995</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1790002621995</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update">
+      <option name="closed" value="true" />
+      <created>1790002673296</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1790002673296</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
