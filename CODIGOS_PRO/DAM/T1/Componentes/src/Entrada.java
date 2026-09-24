@@ -14,19 +14,32 @@ public class Entrada {
      */
     // TODO esta tarea la dejo pendiente para el lunes
     // mod_acceso retorno nombre (args){ funcionalidad }
+    String cosa = "asdasd";
     public static void main(String[] args) {
 
         // variables:
             // segun el dato que guarda: String, char, byte/shot/int/long, double/float, boolean
+            // segun la forma de construirse: primitivos (solo guarda el valor) / complejos (ademas del valor y la funcionadad)
+            // segun la mutabilidad del dato: mutables / no mutables (constante)
+            // segun el scope de la variable: metodo (bloque) / clase
 
         // tipo nombre = valor
-        String nombreLegal = "Borja";
+        final String DNI = "123A";
+        System.out.println("Mi dni es: " +DNI);
+        String nombreLegal = new String("Borja");
         nombreLegal = "Borja M";
         char letra = 'a';
+        Character letraCompleta = 'a';
+        // byte, short, long
         int edad = 41;
+        edad = 43;
+        Integer numeroComplejo = 2;
         double altura = 1.74;
         // float alturaFloat = 1.74f;
-        boolean acierto = true;
+        Double alturaCompleto = 1.98;
+        boolean acierto = false;
+        Boolean aciertoCompleto = true;
+
         // ordenes
         System.out.println("Mi nombre es "+nombreLegal);
         System.out.println("La letra de mi DNI es "+letra);
@@ -44,6 +57,8 @@ public class Entrada {
         System.out.println("La suma de "+9+" y "+6+" tiene como resultado "+ (9+6));
 
 
+
+        System.out.println(acierto);
     }
 
 
@@ -54,6 +69,12 @@ public class Entrada {
      * @return explicate el retort
      */
     public int metodo(String arg) {
+
+        System.out.println(cosa);
+        return 1;
+    }
+    public int metodo1(String arg) {
+        System.out.println(cosa);
         return 1;
     }
 }
