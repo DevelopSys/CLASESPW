@@ -6,16 +6,25 @@ public class Entrada {
     // acceso static retorno main( argumentos ) { algoritmo }
     public static void main(String[] args){
         System.out.println("Iniciamos el juego de los objetos");
-        String nonbre = "asdasd";
-        Jugador jugador1 = new Jugador();
-        // correo = null nombre = null  numeroVidas = 0  habilidad = 0 estrella = false
-        System.out.println(jugador1.nombre);
-        System.out.println(jugador1.numeroVidas);
-        System.out.println(jugador1.estrella);
 
+        Jugador jugador1 = new Jugador();
         Jugador jugador2 = new Jugador("Maria",5,100,true);
-        // correo = null nombre = Maria  numeroVidas = 5  habilidad = 100 estrella = true
-        System.out.println(jugador2.nombre);
-        System.out.println(jugador2.estrella);
+        Jugador jugador3 = new Jugador("Marcos",8);
+        Jugador jugador4 = new Jugador("Borja","borja@gmail.com");
+        Jugador jugador5 = new Jugador();
+        jugador2.saludar();
+        jugador2.recibirImpacto();
+        jugador2.recibirImpacto();
+        jugador2.recibirImpacto();
+        jugador2.recibirImpacto();
+        jugador2.recibirImpacto();
+        jugador2.recibirImpacto();
+        jugador2.recibirImpacto();
+        jugador2.recibirImpacto();
+        System.out.println("Despues de la guerra....");
+        jugador2.saludar();
+
+
+
     }
 }
