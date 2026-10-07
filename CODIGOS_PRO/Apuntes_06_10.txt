@@ -1,0 +1,30 @@
+Tipos de variables
+	
+	primitivas: int, char, double, boolean, double, float -> en memoria solo tengo el dato
+		int edad = 24
+		char letra = 'a'
+		double altura = 12.98
+	complejas: String, Scanner -> en memoeria ademas del dato se guardan las funcionalidades
+		Scanner lector = new Scanner(System.in)
+		String nombre = new String("asdasd") -> String nombre = "asdasd"
+			nombre.funcionalidad
+			nombre.atributo
+
+POO -> Objetos -> Clase con definicion de un "molde" comun
+
+	Jugadores
+		nombre
+		apellido
+		nivelHabilidad
+		nivelVida
+		atacar()
+		defender()
+		recolectar()
+
+	j1 (Borja, "Martin",email,13.9, true,123,19,como ataca, como defiende, como recolecta)
+	j2 (Maria, "Lopez",234,14,como ataca, como defiende, como recolecta)
+
+
+Model: clases que representan los futuros elementos del programa. Los moldes
+View: clases que representan la interaccion con el usuario o sistema. La parte grafica. 
+Controller: clases que representan la parte logica. Como funciona el sistema
