@@ -8,6 +8,8 @@ public class Entrada {
         System.out.println("Iniciando programa de juego");
 
         Jugador jugador1 = new Jugador("Borja", "clan1", 10, 100);
+        Jugador jugador2 = new Jugador("Maria", "clan2", 5, 10);
+        /*
         //jugador1.saludar();
         // nombre=null, clan=clan1, estrella=false, vidas=10, habilidad=100
         Jugador jugador2 = new Jugador("Manuel", "clan2", 5, 9);
@@ -49,6 +51,18 @@ public class Entrada {
         // nombre=null, clan=null, estrella=false, vidas=0, habilidad=0
 
         // System.out.println("Es estrella el jugador 1 es " +jugador1.estrella);
+        */
+        // si quiero acceder a una carateristica de jugador
+        jugador1.setNombre("Pepe");
+        jugador1.setNombre("Jose");
+        jugador1.setVidas(jugador1.getVidas()+1);
+        jugador1.setNombre("Bartolito");
+        System.out.println("El nombre del jugador 1 es "+jugador1.getNombre());
+        System.out.println("El vidas del jugador 1 es "+jugador1.getVidas());
+        System.out.println("El clan del jugador 1 es "+jugador1.getClan());
+        System.out.println("El habilidad del jugador 1 es "+jugador1.getHabilidad());
+        System.out.println("El estrella del jugador 1 es "+jugador1.isEstrella());
+        //jugador1.estaMuerto();
 
     }
 

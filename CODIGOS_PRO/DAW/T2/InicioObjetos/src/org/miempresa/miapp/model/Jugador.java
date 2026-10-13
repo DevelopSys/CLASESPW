@@ -4,19 +4,21 @@ public class Jugador {
 
     // representa el "molde" de lo que sera un jugador real
     // atributos que cualifican -> nombre, nVidas, nHabilidad,
-    public String nombre, clan;
-    public int vidas, habilidad;
-    public boolean estrella;
+    private String nombre, clan;
+    private int vidas, habilidad;
+    private boolean estrella;
 
     // constructor -> la manera en la que se inicia el jugador -> 1 (de momento el vacio) a n
-        // si creas mas de 1 constructor -> SOBRECARGA
-        // si no hay constructor escrito, el vacio lo tienes disponible
-        // si escribes un constructor diferente al vacio, el vacio se enmascara
-            // 1 constuctor
-            // 3 constructores
+    // si creas mas de 1 constructor -> SOBRECARGA
+    // si no hay constructor escrito, el vacio lo tienes disponible
+    // si escribes un constructor diferente al vacio, el vacio se enmascara
+    // 1 constuctor
+    // 3 constructores
     // mod_acc (public) Jugador(tipo p1, tipo p2, tipo p3) {  }
 
-    public Jugador(){}
+    public Jugador() {
+    }
+
     public Jugador(String nombre, String clan,
                    int vidas, int habilidad) {
         this.nombre = nombre; // la variable nombre del metodo = la variable nombre del metodo
@@ -25,6 +27,7 @@ public class Jugador {
         this.habilidad = habilidad;
         estrella = true;
     }
+
     public Jugador(String nombre, String clan, int vidas) {
         this.nombre = nombre;
         this.clan = clan;
@@ -32,7 +35,8 @@ public class Jugador {
         // this.habilidad;
         this.habilidad = (int) (Math.random() * 101);  // (0) (0 - 0.9999999999999) *101 -> 0-100.999999999999
     }
-    public Jugador(int vidas,String nombre, String clan) {
+
+    public Jugador(int vidas, String nombre, String clan) {
         this.nombre = nombre;
         this.clan = clan;
         this.vidas = vidas;
@@ -42,26 +46,83 @@ public class Jugador {
 
     // metodos -> las funcionalidades del elemento cuando sea real
     // mod_acc (private/public/protected) retorno (void/int/double) nombre( param ) {  }
-    public void saludar()
-    {
-        System.out.println("Hola, mi nombre es "+this.nombre);
-        System.out.println("Tengo una cantidad de habilidad de "+this.habilidad);
-        System.out.printf("Tengo %d vidas\n",this.vidas);
+    public void saludar() {
+        System.out.println("Hola, mi nombre es " + this.nombre);
+        System.out.println("Tengo una cantidad de habilidad de " + this.habilidad);
+        System.out.printf("Tengo %d vidas\n", this.vidas);
     }
-    public void lanzarMensaje(String mensaje){
+
+    public void lanzarMensaje(String mensaje) {
         System.out.println(mensaje);
     }
-    public void recibirImpacto(){
+
+    public void recibirImpacto() {
         vidas--;
-        System.out.printf("Mierda, me han dado, me quedan %d vidas\n",vidas);
+        System.out.printf("Mierda, me han dado, me quedan %d vidas\n", vidas);
+        if (estaMuerto()) {
+            System.out.println("No puedo continuar con el juego");
+        }
     }
 
-
-    public boolean estaMuerto(){
+    private boolean estaMuerto() {
         System.out.println("Entro en el hospital, voy a comprobar si estoy muerto");
-        boolean muerto = vidas<=0;
+        boolean muerto = vidas <= 0;
         return muerto;
     }
 
+    public void realizarAtaque() {
+        if (estaMuerto()) {
 
+        } else {
+
+        }
+    }
+
+    // metodos getter -> aquel que da acceso a un elemento privado
+    // (public / private / protected) (void / int /double)
+    // creando un metodo
+
+    public boolean isEstrella() {
+        return estrella;
+    }
+
+    public void setEstrella(boolean estrella) {
+        this.estrella = estrella;
+    }
+
+    public int getHabilidad() {
+        return habilidad;
+    }
+
+    public void setHabilidad(int habilidad) {
+        this.habilidad = habilidad;
+    }
+
+    public int getVidas() {
+        return vidas;
+    }
+
+    public void setVidas(int vidas) {
+        this.vidas = vidas;
+    }
+
+    public String getClan() {
+        return clan;
+    }
+
+    public void setClan(String clan) {
+        this.clan = clan;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        if (nombre.equals("Bartolito")) {
+            System.out.println("No se admite el cambio");
+        } else {
+            this.nombre = nombre;
+        }
+    }
 }
