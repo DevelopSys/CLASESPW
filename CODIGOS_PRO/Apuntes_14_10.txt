@@ -1,0 +1,19 @@
+Sentencisa de control -> ejecutar un bloque de codigo concreto -> UML
+
+	Sentencias de seleccion
+
+		IF -> ejecuta un bloque dependiende de si la condicion se cumple. Con un boolean
+
+			if -> solo una pregunta. Si se cumple ejecuto bloque
+			if - else -> solo una pregunta. Si se cumple ejecuto un bloque sino ejecuto el otro
+			if - else if - else -> n preguntas. Si se cumple la 1º ejecuto un bloque sino se cumple la siguiente, ejecuto el otro
+
+		SWITCH
+
+	Sentencias de repeticion
+
+Ciclo vida software
+
+1. Planifico
+2. Diseñar -> UML
+3. Codifico

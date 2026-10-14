@@ -16,6 +16,40 @@ public class Calculadora {
         System.out.println("Suma completada");
     }
 
+    public void restar (int operando1, int operando2){
+        this.operando1 = operando1;
+        this.operando2 = operando2;
+        this.resultado = this.operando1 - this.operando2;
+        System.out.println("Resta terminada");
+    }
+
+    public void multiplicacion (int operando1, int operando2){
+        this.operando1 = operando1;
+        this.operando2 = operando2;
+        this.resultado = this.operando1 * this.operando2;
+        System.out.println("Multiplicacion terminada");
+    }
+    public void dividir (int operando1, int operando2){
+        this.operando1 = operando1;
+        this.operando2 = operando2;
+        this.resultado = (double) this.operando1 / this.operando2;
+        System.out.println("Division terminada");
+    }
+
+    public void modulo (int operando1, int operando2){
+        this.operando1 = operando1;
+        this.operando2 = operando2;
+        this.resultado = this.operando1 % this.operando2;
+        System.out.println("Modulo terminada");
+    }
+
+    public double sumar(int operando1, int operando2, int opreando3){
+        this.operando1 = operando1;
+        this.operando2 = operando2;
+        this.resultado = this.operando1 + this.operando2;
+        return resultado;
+    }
+
     // metodos
     public int getOperando1() {
         return operando1;
