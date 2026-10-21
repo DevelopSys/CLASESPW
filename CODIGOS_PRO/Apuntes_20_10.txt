@@ -1,0 +1,10 @@
+Seleccion: indicar que bloque se va a ejecutar
+
+	if 		-> 	boolean
+	switch 	->	valor
+
+Repeticion: ejecutar un bloque numero de veces que se indique
+
+	for / foreach 	-> repetir un bloque dependiendo de un rango de datos (0veces ...... Nveces)
+	while 			-> repetir un bloque dependiendo de una condicion boolean (0veces ...... Nveces)
+	do-while		-> ejecuto un bloque y luego repetir dependiendo de una condicion boolean (1veces ...... Nveces)
