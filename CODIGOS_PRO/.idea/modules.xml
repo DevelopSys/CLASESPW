@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/CODIGOS_PRO.iml" filepath="$PROJECT_DIR$/.idea/CODIGOS_PRO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DAM/T2/Calculadora/Calculadora.iml" filepath="$PROJECT_DIR$/DAM/T2/Calculadora/Calculadora.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DAW/T2/Calculadora/Calculadora2.iml" filepath="$PROJECT_DIR$/DAW/T2/Calculadora/Calculadora2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DAM/T1/Componentes/Componentes.iml" filepath="$PROJECT_DIR$/DAM/T1/Componentes/Componentes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DAW/T1/Componentes/Componentes2.iml" filepath="$PROJECT_DIR$/DAW/T1/Componentes/Componentes2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DAW/T1/Ejercicios/Ejercicios.iml" filepath="$PROJECT_DIR$/DAW/T1/Ejercicios/Ejercicios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DAM/T1/Ejercicios/Ejercicios2.iml" filepath="$PROJECT_DIR$/DAM/T1/Ejercicios/Ejercicios2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DAW/T3/EjerciciosClase/EjerciciosClase.iml" filepath="$PROJECT_DIR$/DAW/T3/EjerciciosClase/EjerciciosClase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DAM/T3/EjerciciosClase/EjerciciosClase2.iml" filepath="$PROJECT_DIR$/DAM/T3/EjerciciosClase/EjerciciosClase2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DAM/T3/EstructurasSeleccion/EstructurasSeleccion.iml" filepath="$PROJECT_DIR$/DAM/T3/EstructurasSeleccion/EstructurasSeleccion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DAW/T2/InicioObjetos/InicioObjetos.iml" filepath="$PROJECT_DIR$/DAW/T2/InicioObjetos/InicioObjetos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DAM/T2/JuegoObjetos/JuegoObjetos.iml" filepath="$PROJECT_DIR$/DAM/T2/JuegoObjetos/JuegoObjetos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DAW/T1/Operadores/Operadores.iml" filepath="$PROJECT_DIR$/DAW/T1/Operadores/Operadores.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DAM/T1/Operadores/Operadores2.iml" filepath="$PROJECT_DIR$/DAM/T1/Operadores/Operadores2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DAM/T3/SentenciasRepeticion/SentenciasRepeticion.iml" filepath="$PROJECT_DIR$/DAM/T3/SentenciasRepeticion/SentenciasRepeticion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DAW/T3/SentenciasRepeticion/SentenciasRepeticion2.iml" filepath="$PROJECT_DIR$/DAW/T3/SentenciasRepeticion/SentenciasRepeticion2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DAW/T3/SentenciasSeleccion/SentenciasSeleccion.iml" filepath="$PROJECT_DIR$/DAW/T3/SentenciasSeleccion/SentenciasSeleccion.iml" />
+    </modules>
+  </component>
+</project>
