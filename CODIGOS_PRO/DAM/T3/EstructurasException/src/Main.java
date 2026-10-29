@@ -28,7 +28,7 @@ public class Main {
             }
             resultado = op1 / op2;
             System.out.println("El resultado es " + resultado);
-
+            // se ha cerrado
         } catch (InputMismatchException | ArithmeticException e) {
             System.out.println("Error en la lectura de los operandos o resultado");
             fallo = true;
