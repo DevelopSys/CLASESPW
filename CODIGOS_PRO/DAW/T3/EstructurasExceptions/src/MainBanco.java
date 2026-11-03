@@ -1,12 +1,15 @@
-import model.Banco;
+import controller.Banco;
+import model.CuentaCorriente;
+import utils.BancoException;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MainBanco {
 
     public static void main(String[] args) {
         Banco bbva = new Banco();
+        Scanner scanner = new Scanner(System.in);
+        bbva.darAltaCuenta(new CuentaCorriente("Borja", 1111, 1000));
         // nombre = null cuenta = null
         /*try {
             bbva.cancelarCuenta("Juan", 1234);
@@ -16,19 +19,26 @@ public class MainBanco {
         }
 
          */
-        try (Scanner scanner = new Scanner(System.in)) {
-            String nombreTitular = scanner.next();
-            int saldo = scanner.nextInt();
-            System.out.println("El titular de la cuenta es " + nombreTitular);
-            System.out.println("El saldo es: " + saldo);
-            bbva.cancelarCuenta(nombreTitular,saldo);
-            // cierra el reccurso utilizado en la definicion del bloque
-        } catch (InputMismatchException e) {
-            System.out.println("Tipo de dato introducido de forma incorrecta");
-        } catch (Exception e){
-            System.out.println("Error en la cancelacion de la cuentas");
-        }
+        // tienes 3 intentos para ingresar dinero
 
+        int intentos = 3;
+        do {
+            try {
+                System.out.println("Dime el titular");
+                String titular = scanner.next();
+                System.out.println("Dime el pin");
+                int pin = scanner.nextInt();
+                System.out.println("Dime el saldo");
+                double saldo = scanner.nextInt();
+                bbva.retirarSaldo(saldo, pin, titular);
+                break;
+            } catch (BancoException e) {
+                System.out.println(e.getMessage());
+                intentos--;
+            }
+        } while (intentos > 0);
+        System.out.println("La cuenta tiene un saldo de "+bbva.getCuenta().getSaldo());
+        // bbva.cancelarCuenta("asd", 123);
 
 
     }
