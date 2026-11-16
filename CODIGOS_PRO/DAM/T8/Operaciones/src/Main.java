@@ -52,8 +52,12 @@ public class Main {
                         }
                     }
                     case 5 -> {
+                        // rotacion - izq
+                            // operaciones.rotarIzq();
+                        // rotacion - der
                     }
                     case 6 -> {
+                        operaciones.invertir();
                     }
                     case 7 -> operaciones.ordenar();
                     case 8 -> System.out.println("Saliendo...");

@@ -39,7 +39,8 @@ public class Main {
                             System.out.println("El numero buscado no se encuentra");
                         }
                     }
-                    case 3 -> operaciones.rotarIzq();
+                    case 3 -> operaciones.rotarDer();
+                    case 4 -> operaciones.invertir();
                     case 5 -> operaciones.ordenar();
                     case 6 -> System.out.println(Arrays.toString(operaciones.getNumeros()));
 
