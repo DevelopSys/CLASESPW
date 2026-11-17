@@ -60,7 +60,7 @@ public class Operaciones {
 
     public void rotarDer() {
         int aux = numeros[numeros.length - 1];
-        for (int i = numeros.length - 1; i > 0; i++) {
+        for (int i = numeros.length - 1; i > 0; i--) {
             numeros[i] = numeros[i - 1];
         }
         numeros[0] = aux;

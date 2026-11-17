@@ -54,6 +54,7 @@ public class Main {
                     case 5 -> {
                         // rotacion - izq
                             // operaciones.rotarIzq();
+                            operaciones.rotarDer();
                         // rotacion - der
                     }
                     case 6 -> {
@@ -68,6 +69,7 @@ public class Main {
             scanner.close();
         } catch (Exception e) {
             System.out.println("Error en las IO");
+            System.out.println(e.getMessage());
         }
 
         // 1rellenar
