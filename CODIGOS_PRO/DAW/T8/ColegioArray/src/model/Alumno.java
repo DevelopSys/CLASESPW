@@ -42,12 +42,12 @@ public class Alumno {
         return nota;
     }
 
-    public void setNota(double nota) throws NotaException {
-        if (nota < 0 || nota>10) {
-            throw new NotaException("Nota invalida");
+        public void setNota(double nota) throws NotaException {
+            if (nota < 0 || nota>10) {
+                throw new NotaException("Nota invalida");
+            }
+            this.nota = nota;
         }
-        this.nota = nota;
-    }
 
     public String getNombre() {
         // validacion
