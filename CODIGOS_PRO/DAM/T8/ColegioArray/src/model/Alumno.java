@@ -8,9 +8,12 @@ public class Alumno {
     // atributos: culifican -> depende de las necesidades de tu programa
     private String nombre, dni;
     private double nota;
+
     // constructores: crear el objeto - hacer realizad
-    public Alumno(){}
-    public Alumno(String nombre, String dni){
+    public Alumno() {
+    }
+
+    public Alumno(String nombre, String dni) {
         this.nombre = nombre;
         this.dni = dni;
         nota = -1; // indico que no se ha calificado
@@ -20,7 +23,12 @@ public class Alumno {
     public void mostrarDatos() {
         System.out.println("nombre = " + nombre);
         System.out.println("dni = " + dni);
-        System.out.println("nota = " + nota);
+        System.out.println(nota < 0 ? "Sin calificar" : "Nota: "+nota);
+        /*if (nota < 0) {
+            System.out.println("Sin calificar");
+        } else {
+            System.out.println("nota = " + nota);
+        }*/
     }
 
     public String getNombre() {
