@@ -69,7 +69,7 @@ public class Main {
                                 System.out.println(e.getMessage());
                                 fallo = true;
                             }
-                        }while (fallo);
+                        } while (fallo);
                     }
                     case 4 -> {
                         thpw.mostrarDatos();
@@ -86,18 +86,32 @@ public class Main {
                         }
                     }
                     case 6 -> {
+
+
                         // TODO ordenar por notas -> mayor a menor
-                        // Arrays.sort(); // un array numeros -> numericamente
-                        // un array string -> alfabeticamente
+                        // Arrays.sort(notas); // un array numeros -> numericamente
+                        // [1,5,3,4,9,6,7]-> 1,3,4,5,6,7,9
+                        // ["hola","adios", "gestion"]-> "adios", "gestion", "hola"
+                        // Arrays.sort(nombre); // un array string -> alfabeticamente
+                        // [null,null,null,null,null]
                         Arrays.sort(thpw.getListaAlumnos(), new Comparator<Alumno>() {
-                            // TODO este metodo se ejecuta por pares -> Bubble sort
                             @Override
-                            public int compare(Alumno o1, Alumno o2) {
-                                // TODO solo se retorma 1 o -1 (orden de ordenacion)
+                            public int compare(Alumno alum1, Alumno alum2) {
+                                // return 1 asc
+                                // return -1 des
+                                // return 0 no ord
+                                if (alum1 != null && alum2 != null) {
+                                    if (alum1.getNota() > alum2.getNota())
+                                        return -1;
+                                    else if (alum1.getNota() < alum2.getNota()) {
+                                        return 1;
+                                    }
+                                    // son iguales, no retornas nada
+                                }
                                 return 0;
                             }
                         });
-
+                        thpw.listarAlumnos();
                     }
                 }
             } while (opcion != 7);

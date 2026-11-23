@@ -77,6 +77,7 @@ public class Main {
                         } while (fallo);
                     }
                     case 6 -> {
+                        thepw.ordenarNotas();
                     }
                     case 7 -> System.out.println("Saliendo");
                 }

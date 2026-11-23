@@ -73,16 +73,29 @@ public class Colegio {
     }
 
     // ordenar notas -> muestra los alumnos con notas de mayor a menor
-    public void ordenarNotas(){
+    public void ordenarNotas() {
+
+        // alumno1 alumno2 alumno3 alumno4 alumno5 alumno6
+        // ordenacion natural (numericamente, alfabeticamente)
         Arrays.sort(alumnos, new Comparator<Alumno>() {
             @Override
-            public int compare(Alumno o1, Alumno o2) {
-                // TODO ordenar los alumnos por notas de mayor a menor
-                // 1  / -1
+            public int compare(Alumno alu1, Alumno alu2) {
+                // 1 ordenacion asc
+                // -1 ordenacion des
+                // 0 no haces nada
+                if (alu1 != null && alu2 != null) {
+                    if (alu1.getNota() > alu2.getNota())
+                        return -1;
+                    else if (alu1.getNota() < alu2.getNota()) {
+                        return 1;
+                    }
+                }
                 return 0;
             }
         });
-        // ordenacion natural (numericamente, alfabeticamente)
+        for (Alumno item : alumnos) {
+            item.mostrarDatos();
+        }
     }
 
 

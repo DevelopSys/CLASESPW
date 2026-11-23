@@ -3,6 +3,8 @@ package controller;
 import model.Alumno;
 import util.NotaException;
 
+import java.util.Arrays;
+
 public class Colegio {
 
     // atributos
@@ -24,6 +26,9 @@ public class Colegio {
     }
     // metodos
 
+    private void funcionalidades(){
+
+    }
     // mostrarAlumnos - muestra los datos de todos los alumnos de la lista
     public void listarAlumnos() {
         // [null,null,null,null,null]
